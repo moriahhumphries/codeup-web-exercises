@@ -7,23 +7,38 @@
 <body>
 
 <form method="POST" action="https://request-inspector.glitch.me/">
-    <label for="username">Username</label>
-    <input id="username" name="username" type="text">
+    <label for="email">Email</label>
+    <input id="email" name="email" type="text">
     <br>
 
     <label for="password">Password</label>
     <input id="password" name="password" type="password">
     <br>
 
-    <textarea name="comment" cols="50" rows="10"></textarea>
+    <label for="textarea"><p>Tell us about you!</p>
+    <textarea input id="textarea" name="biography" cols="50" rows="10" textarea placeholder="Write your bio here"></textarea></label>
     <br>
+
     <p>How did you hear about us?</p>
-    Billboard <input type="radio" name="source_question_1" value="Billboard"><br>
+    <label for="billboard">Billboard <input id="billboard"input type="checkbox" name="source_question_1" value="Billboard"></label><br>
 
-    Radio Advertisement <input type="radio" name="source_question_1" value="Radio Advertisement"><br>
+    <label for="radio_advertisement">Radio Advertisement <input id="radio_advertisement" input type="checkbox" name="source_question_2" value="Radio Advertisement"></label><br>
 
-    Internet Advertisement <input type="radio" name="source_question_1" value="Radio Advertisement"><br>
-    Other <input type="radio" name="source_question_1" value="Other"><br>
+    <label for="internet_advertisement">Internet Advertisement <input id="internet_advertisement"input type="checkbox"" name="source_question_3" value="Internet Advertisement"></label><br>
+
+    <label for="other">Other <input id="other"input type="checkbox" name="source_question_4" value="Other"></label><br>
+
+
+<p>Which Web Browser Are You Using?</p>
+    <select name="web-browser">
+        <option value="Chrome">Chrome</option>
+        <option value="Firefox">Firefox</option>
+        <option value="Internet Explorer">Internet Explorer</option>
+    </select>
+    <br>
+    <br>
+
+
 
     <input type="submit">
 </form>
