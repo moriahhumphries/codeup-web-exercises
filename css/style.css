@@ -5,4 +5,21 @@ this file is named "site.css" and is in a directory named "css"
 .fancy-header {
     color: purple;
     text-decoration: underline;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #3366ff;
+    text-decoration: underline;
+}
+
+body {
+    background-color: #ffb84d;
+    background-image: url("https://images.pexels.com/photos/949587/pexels-photo-949587.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 60%;
+
+
 }
