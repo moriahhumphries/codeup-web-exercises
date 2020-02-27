@@ -20,6 +20,42 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-size: 60%;
+}
 
+ul {
+    list-style: square;
+}
+
+* {
+    font-family: Helvetica, Arial, Sans-Serif;
+}
+
+tr, td {
+    border: 2px solid #ff3399;
+    border-radius: 50px;
+    padding: 5px 5px 5px 5px;
+}
+
+table {
+    border: 2px solid #ff3399;
+    padding: 5px 5px 5px 5px;
+}
+
+a:link {
 
 }
+
+a:hover {
+    color: #ff3399;
+    font-size: 1.5 em
+}
+
+a:visted {
+    color: #99004d;
+    font-size: 0.5 em
+}
+
+a:active {
+
+}
+
