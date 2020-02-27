@@ -8,18 +8,18 @@
 
 <form method="POST" action="https://request-inspector.glitch.me/">
 
-    <label for="trip-type-round"><input id="trip-type-round" input type="radio" name="flight-type-1" value="Round trip"> Round Trip</label>
+    <label for="trip-type-round"><input id="trip-type-round" type="radio" name="flight-type-1" value="Round trip"> Round Trip</label>
 
-    <label for="trip-type-oneway"><input id="trip-type-oneway" input type="radio" name="flight-type-_1" value="Billboard"> One way</label>
+    <label for="trip-type-oneway"><input id="trip-type-oneway" type="radio" name="flight-type-_1" value="Billboard"> One way</label>
 
-    <label for="miles"><input id="miles" input type="checkbox" name="redeem-miles" value="redeemed"> Redeem miles</label>
+    <label for="miles"><input id="miles" type="checkbox" name="redeem-miles" value="redeemed"> Redeem miles</label>
 
     <br>
     <br>
 
     <label for="departure-airports">
         <div>From</div>
-    <select name="airport-departure" input id="departure-airports">
+    <select name="airport-departure" id="departure-airports">
         <option value="DFW">Dallas-Fort Worth</option>
         <option value="DAL">Dallas - Love Field</option>
         <option value="AUS">Austin Bergstrom</option>
@@ -28,7 +28,7 @@
 
 <!-- DAL is selected by default -->
     <label for="arrival-airports"><div>To</div>
-        <select name="airport-arrival" input id="arrival-airports">
+        <select name="airport-arrival" id="arrival-airports">
             <option value="DAL" selected>Dallas - Love Field</option>
             <option value="AUS">Austin Bergstrom</option>
         </select>
@@ -36,7 +36,7 @@
 
     <label for="passenger">
         <div>Number of passengers</div>
-        <select name="number-of-passengers" input id="passenger">
+        <select name="number-of-passengers" id="passenger">
             <option value="passengers">1</option>
             <option value="passengers">2</option>
             <option value="passengers">3</option>
@@ -57,12 +57,12 @@
     <label for="departure-date">
         <div>Departure Date</div>
 
-    <input type="date" input id="departure-date" name="date">
+    <input type="date" id="departure-date" name="date">
 
         <label for="return-date">
             <div>Return Date</div>
 
-            <input type="date" input id="return-date" name="date">
+            <input type="date" id="return-date" name="date">
 
     </label>
 
