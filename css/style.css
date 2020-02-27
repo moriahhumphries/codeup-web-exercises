@@ -42,20 +42,19 @@ table {
 }
 
 a:link {
+   color: #3366ff;
+}
 
+a:visited {
+    color: #993399;
 }
 
 a:hover {
     color: #ff3399;
-    font-size: 1.5 em
 }
 
-a:visted {
-    color: #99004d;
-    font-size: 0.5 em
-}
 
 a:active {
-
+    color: #00cc66;
 }
 
