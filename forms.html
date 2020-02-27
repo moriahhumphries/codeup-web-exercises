@@ -10,40 +10,42 @@
 
 <form method="POST" action="https://request-inspector.glitch.me/">
     <label for="email">Email</label>
-    <input id="email" name="email" type="text">
+    <input id="email" placeholder="email here" name="email" type="text">
     <br>
 
     <label for="password">Password</label>
-    <input id="password" name="password" type="password">
+    <input id="password" placeholder="password here" name="password" type="password">
     <br>
 
-    <label for="textarea"><p>Tell us about you!</p>
-    <textarea input id="textarea" name="biography" cols="50" rows="10" textarea placeholder="Write your bio here"></textarea></label>
+    <label for="textarea"><h3>Tell us about you!</h3>
+        <textarea id="textarea" name="biography" cols="50" rows="10"
+                  placeholder="Write your bio here"></textarea></label>
     <br>
 
-    <p>How did you hear about us?</p>
-    <label for="billboard">Billboard <input id="billboard"input type="checkbox" name="source_question_1" value="Billboard"></label><br>
+    <h3>How did you hear about us?</h3>
+    <label for="billboard">Billboard <input id="billboard" type="checkbox" name="source" value="Billboard"></label><br>
 
-    <label for="radio_advertisement">Radio Advertisement <input id="radio_advertisement" input type="checkbox" name="source_question_2" value="Radio Advertisement"></label><br>
+    <label for="radio_advertisement">Radio Advertisement <input id="radio_advertisement" type="checkbox" name="source"
+                                                                value="Radio Advertisement"></label><br>
 
-    <label for="internet_advertisement">Internet Advertisement <input id="internet_advertisement"input type="checkbox"" name="source_question_3" value="Internet Advertisement"></label><br>
+    <label for="internet_advertisement">Internet Advertisement <input id="internet_advertisement" type="checkbox"
+                                                                      name="source"
+                                                                      value="Internet Advertisement"></label><br>
 
-    <label for="other">Other <input id="other"input type="checkbox" name="source_question_4" value="Other"></label><br>
+    <label for="other">Other <input id="other" type="checkbox" name="source" value="Other"></label><br>
 
 
-<label for="web-browser"><p>Which Web Browser Are You Using?</p>
-    <select name="web-browser" input id="web-browser">
-        <option value="Chrome">Chrome</option>
-        <option value="Firefox">Firefox</option>
-        <option value="Internet Explorer">Internet Explorer</option>
-    </select>
-</label>
+    <label for="web-browser"><p>Which Web Browser Are You Using?</p>
+        <select name="web-browser" id="web-browser">
+            <option value="Chrome">Chrome</option>
+            <option value="Firefox">Firefox</option>
+            <option value="Internet Explorer">Internet Explorer</option>
+        </select>
+    </label>
     <br>
     <br>
 
-
-
-    <input type="submit">
+    <button type="submit">Register</button>
 </form>
 
 </body>
