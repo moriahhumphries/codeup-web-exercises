@@ -1,7 +1,27 @@
-p {
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.top-nav {
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    display: inline-block;
+    padding: 0 1em;
+    margin: 0;
+}
+
+div {
     font-weight: bolder;
-    margin: 0 auto;
     font-size: 60px;
+
+
 }
 
 .try {
@@ -13,4 +33,9 @@ p {
     color: white;
     font-weight: bold;
 
+}
+
+a {
+    color: #c6c6c6;
+    text-decoration: none;
 }
