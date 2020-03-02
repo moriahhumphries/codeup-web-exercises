@@ -1,0 +1,16 @@
+p {
+    font-weight: bolder;
+    margin: 0 auto;
+    font-size: 60px;
+}
+
+.try {
+    background-color: #ff3e68;
+    border: 1px solid grey;
+    border-radius: 30px;
+    height: 25px;
+    width: 200px;
+    color: white;
+    font-weight: bold;
+
+}
