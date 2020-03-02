@@ -62,12 +62,15 @@ a {
 
 .profile-form {
 
-    clear: both;
-    float: right;
-    line-height: 20px;
+    /*clear: both;*/
+    /*float: right;*/
+    line-height: 80px;
     margin: 15px 0;
 
+}
 
+.container {
+    margin: 2em;
 }
 .btn {
     border: 1px solid var(--main-link-color);
@@ -117,14 +120,20 @@ a {
     background-color: var(--light-bg);
     border: 1px solid var(--separator-color);
     padding: .5em;
-    overflow: visible;
+    overflow: auto;
 }
 
 .media-image {
- max-width: 50px;
+    max-width: 50px;
     top: 1.33em;
     float: left;
 }
+
+.media-body {
+    width: calc(100% - 50px);
+    float: left;
+}
+
 
 .profile-items {
     padding: 0;
@@ -136,9 +145,7 @@ a {
     margin: .5em;
 }
 
-.container{
-    margin: 2em;
-}
+
 .text-right {
     text-align: right;
 }
