@@ -102,6 +102,9 @@ section:nth-of-type(3) h3 {
     width: 5em;
     background: brown;
     /* enter needed declarations here */
+    flex-grow: 1;
+    align-items: stretch;
+
 }
 
 .large-brown-box:nth-of-type(2) {
@@ -110,12 +113,16 @@ section:nth-of-type(3) h3 {
 
 section:nth-of-type(5) {
     /* enter needed declarations here */
+    justify-content: space-evenly;
 }
 
 .yellow-box {
     background: yellow;
     width: 2em;
     height: 2em;
+    margin: 1em 0;
+
+
 
 }
 
