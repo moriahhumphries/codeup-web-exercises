@@ -85,6 +85,7 @@ section:nth-of-type(3) {
 
 section:nth-of-type(3) h3 {
     flex-grow: 1;
+    margin: 0 0 1em 0;
 
 
 }
@@ -130,14 +131,20 @@ section:nth-of-type(6) {
     background: coral;
     height: 14em;
     /* enter needed declarations here */
+    flex-wrap: wrap;
+    justify-content: space-between;
+
 }
 
 .grey-box {
     background: grey;
     width: 3em;
     height: 3em;
+    align-self: center;
+
 }
 
 .grey-box:nth-of-type(odd) {
     height: 4em;
+
 }
