@@ -121,7 +121,20 @@
 
     @media screen and (min-width:1200px) {
 
+        .hidden-on-desktop {
+            display: none;
+        }
 
+        h1 {
+            text-align: left;
+            margin-top: 40px;
+            display: inline;
+        }
 
+        li {
+            background-color: white;
+            display: inline;
+            align-text:
+        }
     }
 }
