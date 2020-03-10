@@ -1,0 +1,127 @@
+@media screen and (min-width:768px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: grid;
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: 1fr 1fr 2fr 2fr 1fr 1fr .5fr);
+        width: 100%;
+        height: 100vh;
+        font-family: sans-serif;
+    }
+
+    .hidden-on-desktop {
+        background-color: #c0ecfa;
+        width: 100%;
+        height: 60%;
+        margin: 5% 0;
+        border: 3px solid lightgrey;
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+        text-align: center;
+        font-size: 2em;
+
+    }
+
+    .alert-info {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .alert-info a {
+        text-decoration: none;
+        color: black;
+
+    }
+
+
+
+    h1 {
+        text-align: center;
+        font-size: 4em;
+        width: 100%;
+        height: 75px;
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+        margin: auto;
+    }
+
+
+    nav {
+        grid-row: 3 / 4;
+        grid-column: 2 / 3;
+        text-align: center;
+        list-style: none;
+        height: 100%;
+
+    }
+
+    .nav-links {
+       list-style: none;
+   }
+
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgrey;
+        margin: 20px 0;
+        width: 100%;
+        height: 3.5em;
+    }
+
+    .header-img {
+        grid-row: 4 / 5;
+        grid-column: 2 / 3;
+        width: 100%;
+        height: auto;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+    #main {
+        grid-row: 5 / 6;
+        grid-column: 2 / 3;
+        height: 100px;
+    }
+
+    .sub-section {
+        grid-row: 6 / 7;
+        grid-column: 2 / 3;
+        font-style: italic;
+    }
+
+
+
+    footer {
+        grid-row: 7 / 8;
+        grid-column: 2 / 3;
+        margin-top: 30px;
+    }
+
+
+
+
+
+
+
+
+
+    @media screen and (min-width:1200px) {
+
+
+
+    }
+}
