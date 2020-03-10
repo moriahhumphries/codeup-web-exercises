@@ -3,38 +3,23 @@
 
 }
 
-div.jumbotron.jumbotron-fluid {
-    padding: 0;
-    margin: 0;
+.pizza {
+    background-image: url('../imgs/pizza.png');
     width: 100%;
+
+
 
 }
 
-.container h1 {
+h1 {
     background-color: white;
     color: black;
     opacity: 0.6;
     text-align: center;
     padding: 0;
     margin: 0;
-    width: 100vw;
-
-
-
-}
-
-img {
-    width: 100vw;
-
-}
-
-div.container {
     width: 100%;
-   margin: 0;
-    padding: 0;
 }
 
-main.main-container {
-    padding: 0;
-    margin: 0;
-}
+
+
