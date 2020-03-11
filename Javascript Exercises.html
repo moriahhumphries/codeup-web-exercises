@@ -74,15 +74,45 @@ var onMarsRightNow = false;
         return typeof aValue;
     }
 
-    console.log('checkType(1) : ' + checkType(1));
-    console.log('checkType(\'Apex\') : ' + checkType('Apex'));
-    console.log('checkType(true) : ' + checkType(true));
+    // console.log('checkType(1) : ' + checkType(1));
+    // console.log('checkType(\'Apex\') : ' + checkType('Apex'));
+    // console.log('checkType(true) : ' + checkType(true));
 
  // Exercise 12
 
-// console.log(typeof "Apex");
-// console.log(typeof 14);
-// console.log(typeof true);
+    // function checkTypes(anArray){
+    //
+    //     for(var x = 0; x < anArray.length; x++ ){
+    //         console.log( checkType(anArray[x]) );
+    //     }
+    //
+    // }
+    //
+    // checkTypes([2,'Apex', false]);
+    // checkTypes([10]);
+
+    // Exercise 13
+
+    function isString(item) {
+        return checkType(item) === "string";
+    }
+
+    console.log(isString(true));
+    console.log(isString("hello"));
+
+
+
+
+    // Exercise 14
+
+    function isNumber(aNumber) {
+        return checkType(aNumber) === "number";
+    }
+
+    console.log(isNumber("hello"));
+    console.log(isNumber(15));
+
+
 
 
 
