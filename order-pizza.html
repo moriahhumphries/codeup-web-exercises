@@ -123,14 +123,12 @@
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">How Much?</li>
-                    <li class="list-group-item"><div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio1">Small (10")</label>
-                    </div></li>
-                    <li class="list-group-item"><div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio2">Medium (12")</label>
-                    </div></li>
+                    <li class="list-group-item"><select class="form-control"><option>Light</option>
+                        <option>Normal</option>
+                        <option>Extra</option>
+                        <option>Double</option>
+                    </select>
+                    </li>
                 </ul>
             </div>
 
@@ -140,18 +138,24 @@
 
             <div class="card w-100" style="width: 18rem;">
                 <div class="card-header">
-                    Crispy Thin
+                    Sauce
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
-                    <li class="list-group-item"><div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio3">Medium (12")</label>
-                    </div></li>
-                    <li class="list-group-item"><div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio4">Large (14")</label>
-                    </div></li>
+                    <li class="list-group-item">What Type?</li>
+                    <li class="list-group-item"><select class="form-control"><option>Tomato</option>
+                        <option>Marinara Sauce</option>
+                        <option>BBQ Sauce</option>
+                        <option>Alfredo Sauce</option>
+                    </select>
+                    </li>
+                </ul>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">How Much?</li>
+                    <li class="list-group-item"><select class="form-control"><option>Light</option>
+                        <option>Normal</option>
+                        <option>Extra</option>
+                    </select>
+                    </li>
                 </ul>
             </div>
 
@@ -164,23 +168,36 @@
 
     <div class="card w-100">
         <div class="card-body">
-            <h5 class="card-header bg-primary text-white">Choose Style and Crust</h5>
+            <h5 class="card-header bg-primary text-white">Choose Toppings</h5>
             <div class="card w-100" style="width: 18rem;">
                 <div class="card-header">
-                    Hand Tossed
+                    Choose Meats
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
-                    <li class="list-group-item"><div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio1">Small (10")</label>
+                    <li class="list-group-item"><div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Beef
+                        </label>
                     </div></li>
-                    <li class="list-group-item"><div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio2">Medium (12")</label>
+                    <li class="list-group-item"><div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Ham
+                        </label>
                     </div></li>
-                </ul>
-            </div>
+                    <li class="list-group-item"><div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Philly Steak
+                        </label>
+                    </div></li>
+                    <li class="list-group-item"><div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Bacon
+                        </label>
+                    </div></li>
 
             <!--                    Separate sections -->
 
@@ -188,20 +205,33 @@
 
             <div class="card w-100" style="width: 18rem;">
                 <div class="card-header">
-                    Crispy Thin
+                    Choose Non-Meats
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
-                    <li class="list-group-item"><div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio3">Medium (12")</label>
+                    <li class="list-group-item"><div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                           Green Peppers
+                        </label>
                     </div></li>
-                    <li class="list-group-item"><div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio4">Large (14")</label>
+                    <li class="list-group-item"><div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Mushrooms
+                    </label>
+                </div></li>
+                    <li class="list-group-item"><div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Onions
+                        </label>
                     </div></li>
-                </ul>
-            </div>
+                    <li class="list-group-item"><div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Jalapeño Peppers
+                        </label>
+                    </div></li>
 
 
             <a href="#" class="btn btn-primary">Checkout</a>
