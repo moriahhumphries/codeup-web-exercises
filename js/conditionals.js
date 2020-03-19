@@ -16,6 +16,20 @@
  * Can you refactor your code to use functions?
  */
 
+var enterNumber = confirm('Do you want to enter a number?');
+
+
+
+if(enterNumber) {
+    enterNumber = Number;
+    prompt('Please enter a number.');
+
+}
+
+if(enterNumber) {
+    alert(Number + 100);
+}
+
 /* ########################################################################## */
 
 /**
