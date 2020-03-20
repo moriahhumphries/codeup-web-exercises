@@ -15,7 +15,7 @@
  *
  * Can you refactor your code to use functions?
  */
-
+/*
 var enterNumber = confirm('Do you want to enter a number?');
 
 
@@ -38,24 +38,7 @@ if(isNaN(parsedNumber)) {
 }
 
 
-
-
-
-
-
-
-//
-//
-//     if(Math.sign(userNumber) === 1){
-//         alert('This number is positive');
-//     }else if(Math.sign(userNumber) === -1) {
-//         alert('This number is negative');
-//     }else{
-//         alert('you scumbag entering 0')
-//     }
-// if(userNumber) {
-//     alert('Your result is: ' + parseInt(userNumber) + 100;
-// }
+ */
 
 
 
@@ -81,6 +64,37 @@ if(isNaN(parsedNumber)) {
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
+
+function analyzeColor(color) {
+    if (color === "blue") {
+        return color + " is the color of the sky";
+    } else if (color === "red") {
+        return "Strawberries are " + color;
+    } else if (color === "cyan") {
+        return "I don't know anything about " + color;
+    } else {
+        return color + " is not valid";
+    }
+}
+    console.log(analyzeColor("blue"));
+    console.log(analyzeColor("red"));
+    console.log(analyzeColor("cyan"));
+    console.log(analyzeColor("purple"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Don't change the next two lines!
 // These lines create two variables for you:
