@@ -143,6 +143,17 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
 
+function calculateTotal (luckyNumber, totalAmount) {
+    if (luckyNumber === 0) {
+        return totalAmount;
+    } else if (luckyNumber === 1) {
+        return totalAmount * .90;
+    }
+}
+
+console.log('calculateTotal((0, 100)', calculateTotal(luckyNumber 0)))
+
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
