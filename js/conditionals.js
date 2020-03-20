@@ -21,14 +21,46 @@ var enterNumber = confirm('Do you want to enter a number?');
 
 
 if(enterNumber) {
-    enterNumber = Number;
-    prompt('Please enter a number.');
-
+    var userNumber = prompt('Enter your number.');
+    var parsedNumber = parseInt(userNumber);
 }
 
-if(enterNumber) {
-    alert(Number + 100);
+
+if(isNaN(parsedNumber)) {
+    alert('You didn\'t enter a number');
+} else {
+    var evenOrOdd = (parsedNumber % 2 === 0) ? "even" : "odd";
+    alert('The number is ' + evenOrOdd);
+    var add100 = parsedNumber + 100;
+    alert('Your number plus 100 is ' + add100);
+    var negativeOrPositive = (parsedNumber >= 0) ? "positive" : "negative";
+    alert('The number you entered is ' + negativeOrPositive);
 }
+
+
+
+
+
+
+
+
+//
+//
+//     if(Math.sign(userNumber) === 1){
+//         alert('This number is positive');
+//     }else if(Math.sign(userNumber) === -1) {
+//         alert('This number is negative');
+//     }else{
+//         alert('you scumbag entering 0')
+//     }
+// if(userNumber) {
+//     alert('Your result is: ' + parseInt(userNumber) + 100;
+// }
+
+
+
+
+
 
 /* ########################################################################## */
 
