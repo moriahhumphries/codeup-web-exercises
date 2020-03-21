@@ -82,20 +82,6 @@ function analyzeColor(color) {
     console.log(analyzeColor("purple"));
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
@@ -109,10 +95,33 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 
+console.log('Message should alternate.', analyzeColor(randomColor));
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
+
+function analyzeColor(color) {
+    switch (color) {
+        case "blue":
+            return color + " is the color of the sky";
+            break;
+        case "red":
+            return "Strawberries are " + color;
+            break;
+        case "cyan":
+            return "I don't know anything about " + color;
+            break;
+        default:
+            return color + " is not valid";
+            break;
+    }
+}
+
+console.log(analyzeColor('blue')); // returns "blue is the color of the sky"
+console.log(analyzeColor('red')); // returns "Strawberries are red"
+console.log(analyzeColor('cyan')); // returns "I don't know anything about cyan"
+console.log(analyzeColor('green'));
 
 /**
  * TODO:
@@ -121,6 +130,8 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * function to show it to the user.
  */
 
+var colorInput = prompt('Please enter a color.');
+alert(analyzeColor(colorInput));
 /* ########################################################################## */
 
 /**
@@ -143,15 +154,29 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
 
-function calculateTotal (luckyNumber, totalAmount) {
-    if (luckyNumber === 0) {
-        return totalAmount;
+function calculateTotal(luckyNumber, totalBill){
+    if (luckyNumber === 0 || luckyNumber > 5) {
+        return totalBill;
     } else if (luckyNumber === 1) {
-        return totalAmount * .90;
+        return totalBill * .90;
+    } else if (luckyNumber === 2) {
+        return totalBill * .75;
+    } else if (luckyNumber === 3) {
+        return totalBill * .65;
+    } else if (luckyNumber === 4) {
+        return totalBill * .50;
+    } else if (luckyNumber === 5) {
+        return 0;
     }
 }
 
-console.log('calculateTotal((0, 100)', calculateTotal(luckyNumber 0)))
+console.log('calculateTotal(0, 100)', calculateTotal(0, 100));
+console.log('calculateTotal(1, 100)', calculateTotal(1, 100));
+console.log('calculateTotal(2, 100)', calculateTotal(2, 100));
+console.log('calculateTotal(3, 100)', calculateTotal(3, 100));
+console.log('calculateTotal(4, 100)', calculateTotal(4, 100));
+console.log('calculateTotal(5, 100)', calculateTotal(5, 100));
+console.log('calculateTotal(6, 100)', calculateTotal(6, 100));
 
 
 /**
@@ -162,4 +187,11 @@ console.log('calculateTotal((0, 100)', calculateTotal(luckyNumber 0)))
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+
+
+var luckyNumber = Math.floor(Math.random() * 6);
+var parsedNumber = promptForNumber('Please enter your total grocery bill.');
+var finalTotal = calculateTotal(luckyNumber, parsedNumber);
+alert('Your lucky number is ' + luckyNumber);
+alert('Total before discount is applied: ' + parsedNumber);
+alert('Total after discount is applied: ' + finalTotal);
