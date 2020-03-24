@@ -220,19 +220,19 @@ var randomColors = ["red","orange", "yellow", "blue", "green"]
 //  If divisible by 3 and 5, log "FizzBuzz"
 //  All other cases, just log the number.
 
-for (var i = 0; i <= 100; i++) {
-    if (i % 3 === 0) {
-        console.log('Fizz: ' + i);
-    }
-    if (i % 5 === 0) {
-        console.log('Buzz: ' + i);
-    }
-    if (i % 3 === 0 && i % 5 === 0) {
-        console.log('FizzBuzz: ' + i);
-    } else if (i % 3 !== 0 && i % 5 !== 0) {
-        console.log(i);
-    }
-}
+// for (var i = 0; i <= 100; i++) {
+//     if (i % 3 === 0) {
+//         console.log('Fizz: ' + i);
+//     }
+//     if (i % 5 === 0) {
+//         console.log('Buzz: ' + i);
+//     }
+//     if (i % 3 === 0 && i % 5 === 0) {
+//         console.log('FizzBuzz: ' + i);
+//     } else if (i % 3 !== 0 && i % 5 !== 0) {
+//         console.log(i);
+//     }
+// }
 
 
 
@@ -244,8 +244,27 @@ for (var i = 0; i <= 100; i++) {
  *********************************************/
 // We can get a loop to stop using break;
 
-
-
-
+// var numberToStopAt = 5;
+// //
+// // for (var i = 1; i < 100; i++) {
+// //
+// //     console.log('Loop counter is: ' + i);
+// //
+// //     if (i === numberToStopAt) {
+// //         console.log('We have reached the break number');
+// //         break;
+// //         console.log('Will never show');
+// //     }
+// //
+// // }
 // We can get an iteration to skip using continue;
 
+var numberOfEvenNumbersFound = 0;
+
+for (var i = 0; i <= 100; i++) {
+    if (i % 2 === 0 && numberOfEvenNumbersFound < 5){
+        console.log('First five even numbers: ' + i);
+        numberOfEvenNumbersFound++;
+    }
+
+}
