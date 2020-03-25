@@ -37,8 +37,8 @@
      * array.
      */
 
-    for (var i = 0; i < names.length; i++) {
-        console.log('The index is: ' + i + " and the name is " + names[i]);
+    for (var index = 0; index < names.length; index++) {
+        console.log('The index is: ' + index + " and the name is " + names[index]);
     }
 
     /**
@@ -47,8 +47,8 @@
      */
 
     names.forEach(function(name, index) {
-            console.log('Here is a name: '+ name);
-            console.log('Here is the index: ' + index);
+            console.log('Here is the index: ' + index + ' and here is the name: '+ name);
+
         });
 
     /**
@@ -65,7 +65,11 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
-var first = [1, 2, 3, 4, 5];
+    // function first(array){
+    //     return array[0];
+    // }
+
+
 console.log(first[0]);
 
 var second = [1, 2, 3, 4, 5];
