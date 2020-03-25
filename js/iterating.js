@@ -31,10 +31,6 @@
     console.log(names[3]);
 
 
-    // names.forEach(function(element) {
-    //     console.log('Here is a name: ' + names);
-    // })
-
     /**
      * TODO:
      * Write some code that uses a for loop to log every item in the names
@@ -49,6 +45,11 @@
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
+
+    names.forEach(function(name, index) {
+            console.log('Here is a name: '+ name);
+            console.log('Here is the index: ' + index);
+        });
 
     /**
      * TODO:
