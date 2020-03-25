@@ -1,9 +1,9 @@
 // showMultiplicationTable
 
-function showMultiplicationTable(i){
-    for (var i = 0; i < showMultiplicationTable().length; i ++) {
-    console.log(showMultiplicationTable()[i]);
-}
+// function showMultiplicationTable(i){
+//     for (var i = 0; i < showMultiplicationTable().length; i ++) {
+//     console.log(showMultiplicationTable()[i]);
+// }
 
 // 10 random numbers between 20 and 200
 // var numberOfEvenNumbersFound = Math.floor(Math.random() * 20) + 180;
@@ -18,14 +18,11 @@ function showMultiplicationTable(i){
 //     }
 // }
 
-// #5 console log for loop - 5
+// #5 console log for loop minus 5
 
-// var i;
-// for (i = 100; i <= 5; i--);
-
-// for (var i = 0; i < 100; i=-5){
-//     console.log('Minus 5: ' + i);
-// }
+for (var i = 100; i >= 5; i -= 5) {
+    console.log('Minus 5: ' + i);
+}
 
 
 
