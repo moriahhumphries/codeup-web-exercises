@@ -16,7 +16,7 @@
      * array.
      */
 
-    console.log(names.length);
+    console.log('Number of names in array: ' + names.length);
 
     /**
      * TODO:
@@ -24,7 +24,7 @@
      * accessing each element's index.
      */
 
-
+    console.log('A list of each name in the array follows: ');
     console.log(names[0]);
     console.log(names[1]);
     console.log(names[2]);
@@ -64,5 +64,16 @@
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
+
+var first = [1, 2, 3, 4, 5];
+console.log(first[0]);
+
+var second = [1, 2, 3, 4, 5];
+console.log(second[1]);
+
+var last = [1, 2, 3, 4, 5];
+console.log(last[4]);
+
+
 
 })();
