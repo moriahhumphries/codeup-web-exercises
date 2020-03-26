@@ -23,13 +23,17 @@
      * string, and <li> tags around each planet.
      */
 
-    var planetsArray = planetsString.split("|");
-    planetsArray.join("<br>");
-    console.log("planets with break tags:");
-    console.log(planetsArray);
 
-    planetsArray.join("<ul>" + "<li>" + "</li>" + "</ul>");
-    console.log("Unordered List Array");
-    console.log(planetsArray);
+    var brPlanets = "Mercury<br>Venus<br>Earth<br>Mars<br>Jupiter<br>Saturn<br>Uranus<br>Neptune";
+    console.log(brPlanets);
+
+    // var planetsArray = planetsString.split("|");
+    // planetsArray.join("<br>");
+    // console.log("planets with break tags:");
+    // console.log(planetsArray);
+    //
+    // planetsArray.join("<ul>" + "<li>" + "</li>" + "</ul>");
+    // console.log("Unordered List Array");
+    // console.log(planetsArray);
 
 })();
