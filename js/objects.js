@@ -14,7 +14,7 @@
 
     var person = {
     firstName: 'Moriah',
-    lastName: 'Humphries'
+    lastName: 'Humphries',
     };
 
     console.log(person.firstName);
@@ -86,30 +86,7 @@
     }
    applyDiscount();
 
-    // console.log(applyDiscount(100, .55))
-    //
-    // console.log("Here is " + shoppers[0].name + "'s total: $" + shoppers[0].amount + " " + shoppers[0].discount + ".");
 
-
-    // console.log ('Here is ' + shoppers.name[0] + "'s" + shoppers.amount + " " + discount);
-
-    // var shoppers = [
-    //         {name: 'Cameron',
-    //             amount: 180,
-    //         discount: 0},
-    //
-    //
-    //         {name: 'Ryan',
-    //             amount: 250,
-    //         discount: .12},
-    //
-    //         {name: 'George',
-    //             amount: 320,
-    //         discount: .12},
-    //     ];
-    //
-    //
-    //
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -122,6 +99,47 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    var books = [
+        {
+        title: '"The Urgle of Gurgle"',
+        author: {
+            firstName: "Urkle",
+            lastName: "Murgle",
+        }
+    },
+        {
+            title: '"Exceptional Kittens of House Humphries"',
+            author: {
+                firstName: "Moriah",
+                lastName: "Humphries",
+            }
+        },
+        {
+            title: '"Celestial Cats"',
+            author: {
+                firstName: "Merlin",
+                lastName: "Edwards",
+            }
+        },
+        {
+            title: '"12 Shoes a\' Showin\'"',
+            author: {
+                firstName: "Cobbler",
+                lastName: "Bob",
+            }
+        },
+        {
+            title: '"Goodnight World"',
+            author: {
+                firstName: "Tired",
+                lastName: "Sam",
+            }
+        }
+];
+
+    console.log(books[0].title);
+    console.log('By: ' + books[0].author.firstName + " " + books[0].author.lastName);
 
     /**
      * TODO:
