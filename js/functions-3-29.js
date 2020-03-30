@@ -25,8 +25,6 @@ console.log(sayHello('Moriah'));
  * console.log 'helloMessage' to check your work
  */
 
-var helloMessage = sayHello('Moriah');
-console.log(helloMessage);
 
 /**
  * TODO:
@@ -35,9 +33,6 @@ console.log(helloMessage);
  * console.
  */
 
-var myName = 'Moriah';
-console.log(myName);
-console.log(sayHello(myName));
 
 
 // Don't modify the following line, it generates a random number between 1 and 3
@@ -62,15 +57,6 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
-function isTwo(num){
-   if (random === 2) {
-       return true;
-   } else {
-       return false;
-   }
-}
-
-isTwo(random);
 
 /**
  * TODO:
