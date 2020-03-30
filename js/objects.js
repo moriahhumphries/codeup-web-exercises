@@ -12,6 +12,14 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
+    var person = {
+    firstName: 'Moriah',
+    lastName: 'Humphries'
+    };
+
+    console.log(person.firstName);
+    console.log(person.lastName);
+
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -21,6 +29,11 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+
+    function sayHello(name) {
+        return('Hello from ' + person.firstName + " " +  person.lastName + "!");
+    }
+    console.log(sayHello())
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -36,12 +49,67 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {
+            name: 'Cameron',
+            amount: 180,
+            discount: .12,
+            // finalTotal:
 
+        },
+        {
+            name: 'Ryan',
+            amount: 250,
+            discount: .12,
+            // finalTotal:
+        },
+        {
+            name: 'George',
+            amount: 320,
+            discount: .12,
+            // finalTotal:
+
+        },
+    ];
+    function applyDiscount() {
+    shoppers.forEach(function(shopper, index){
+
+        if (shopper.amount < 200) {
+            console.log('The discount for ' + shopper.name + ' is $0');
+        } else {
+            console.log('The total for ' + shopper.name + " is $" + shopper.amount * shopper.discount + ' and the final total after discount is $' + (shopper.amount - (shopper.amount * shopper.discount)));
+        }
+
+
+        })
+
+    }
+   applyDiscount();
+
+    // console.log(applyDiscount(100, .55))
+    //
+    // console.log("Here is " + shoppers[0].name + "'s total: $" + shoppers[0].amount + " " + shoppers[0].discount + ".");
+
+
+    // console.log ('Here is ' + shoppers.name[0] + "'s" + shoppers.amount + " " + discount);
+
+    // var shoppers = [
+    //         {name: 'Cameron',
+    //             amount: 180,
+    //         discount: 0},
+    //
+    //
+    //         {name: 'Ryan',
+    //             amount: 250,
+    //         discount: .12},
+    //
+    //         {name: 'George',
+    //             amount: 320,
+    //         discount: .12},
+    //     ];
+    //
+    //
+    //
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
