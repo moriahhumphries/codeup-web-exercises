@@ -138,8 +138,8 @@
         }
 ];
 
-    console.log(books[0].title);
-    console.log('By: ' + books[0].author.firstName + " " + books[0].author.lastName);
+    // console.log(books[0].title);
+    // console.log('By: ' + books[0].author.firstName + " " + books[0].author.lastName);
 
     /**
      * TODO:
@@ -177,4 +177,11 @@
      *   `showBookInfo` function.
      */
 
-})();
+    function showBooks() {
+        books.forEach(function(book, index) {
+            console.log(book.title);
+            console.log('By: ' + books[0].author.firstName + " " + books[0].author.lastName);
+
+        },
+    }
+    showBooks();
