@@ -1,3 +1,5 @@
+
+
 (function() {
     "use strict";
 
@@ -177,11 +179,13 @@
      *   `showBookInfo` function.
      */
 
-    function showBooks() {
-        books.forEach(function(book, index) {
-            console.log(book.title);
-            console.log('By: ' + books[0].author.firstName + " " + books[0].author.lastName);
 
-        },
-    }
-    showBooks();
+        books.forEach(function(book, index) {
+        });
+            console.log('Book # ' + (index + 1));
+            console.log('Title: ' + book.title);
+            console.log('By: ' + books[0].author.firstName + " " + books.author.lastName);
+
+        });
+
+
