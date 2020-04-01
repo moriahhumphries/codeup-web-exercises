@@ -15,6 +15,8 @@
     <li data-dbid="4">Item 4</li>
     <li data-dbid="5">Item 5</li>
 </ul>
+<button id = "list">Jazz up list!</button>
+
 <h2 id="sub-header">Hello Again.</h2>
 <button id="blue-sub">Feeling Blue?</button>
 <p class="sub-paragraph">
@@ -65,16 +67,21 @@
 
         // TODO: Set text color on every other list item to grey
         // TODO: Set text color of li with dbid = 1 to blue
+    var listBtn = document.getElementById("list");
+        listBtn.addEventListener("click", function () {
+            console.log('connected');
+            for (var index = 0; index < listItems.length; index++) {
+                if(index % 2 !== 0) {
+                    listItems[index].style.color = "grey";
+                }
+                var dBid = listItems[index].getAttribute("data-dbid");
+                if(dBid === "1") {
+                    listItems[index].style.color = "blue";
+                }
+            }
+        });
 
-        for (var index = 0; index < listItems.length; index++) {
-           if(index % 2 !== 0) {
-               listItems[index].style.color = "grey";
-           }
-            var dBid = listItems[index].getAttribute("data-dbid");
-           if(dBid === "1") {
-               listItems[index].style.color = "blue";
-           }
-        }
+
 
 
 
