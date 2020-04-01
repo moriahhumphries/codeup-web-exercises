@@ -102,43 +102,43 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
-//     var books = [
-//         {
-//         title: '"The Urgle of Gurgle"',
-//         author: {
-//             firstName: "Urkle",
-//             lastName: "Murgle",
-//         }
-//     },
-//         {
-//             title: '"Exceptional Kittens of House Humphries"',
-//             author: {
-//                 firstName: "Moriah",
-//                 lastName: "Humphries",
-//             }
-//         },
-//         {
-//             title: '"Celestial Cats"',
-//             author: {
-//                 firstName: "Merlin",
-//                 lastName: "Edwards",
-//             }
-//         },
-//         {
-//             title: '"12 Shoes a\' Showin\'"',
-//             author: {
-//                 firstName: "Cobbler",
-//                 lastName: "Bob",
-//             }
-//         },
-//         {
-//             title: '"Goodnight World"',
-//             author: {
-//                 firstName: "Tired",
-//                 lastName: "Sam",
-//             }
-//         }
-// ];
+    var books = [
+        {
+        title: '"The Urgle of Gurgle"',
+        author: {
+            firstName: "Urkle",
+            lastName: "Murgle",
+        }
+    },
+        {
+            title: '"Exceptional Kittens of House Humphries"',
+            author: {
+                firstName: "Moriah",
+                lastName: "Humphries",
+            }
+        },
+        {
+            title: '"Celestial Cats"',
+            author: {
+                firstName: "Merlin",
+                lastName: "Edwards",
+            }
+        },
+        {
+            title: '"12 Shoes a\' Showin\'"',
+            author: {
+                firstName: "Cobbler",
+                lastName: "Bob",
+            }
+        },
+        {
+            title: '"Goodnight World"',
+            author: {
+                firstName: "Tired",
+                lastName: "Sam",
+            }
+        }
+];
 
     // console.log(books[0].title);
     // console.log('By: ' + books[0].author.firstName + " " + books[0].author.lastName);
@@ -180,11 +180,11 @@
      */
 
 
-        // books.forEach(function(book, index) {
-        //     console.log('Book # ' + (index + 1));
-        //     console.log('Title: ' + book.title);
-        //     console.log('By: ' + books[0].author.firstName + " " + books.author.lastName);
-        // });
+        books.forEach(function(book, index) {
+            console.log('Book # ' + (index + 1));
+            console.log('Title: ' + book.title);
+            console.log('By: ' + book.author.firstName + " " + book.author.lastName);
+        });
 })();
 
 
