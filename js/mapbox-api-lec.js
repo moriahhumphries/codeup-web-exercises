@@ -3,6 +3,8 @@
  *********************************************/
 // TODO TOGETHER: Open .gitignore and add keys.js. Add keys.js file and import to mapbox html file. Your api keys are stored in keys.js and are added to the .gitignore so they are protected
 
+console.log('Token: ' + mapBoxToken);
+
 /**********************************************
  * 			CUSTOMIZING THE MAP
  *********************************************/
@@ -14,7 +16,11 @@
 
 //TODO TOGETHER: Set map to Dallas area using the coordinates [-96.8057, 32.7787]
 
-
+mapboxgl.accessToken = 'pk.eyJ1IjoibW9yaWFoaHVtcGhyaWVzIiwiYSI6ImNrOGl1Y2l1NTA0bTIzbG13MmFva2M5cTUifQ.LeM-tEB6EjF9glmzXdWrHg';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9'
+});
 
 
 
