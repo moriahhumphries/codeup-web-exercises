@@ -122,9 +122,7 @@ geocode("701 Commerce St. Dallas, TX. 75202", mapBoxToken).then(function(result)
 
 
 
-// TODO TOGETHER: Reverse Geocoding: Using the reverse geocoding method, enter the coordinates {lng: -96.8084, lat: 32.7799} to get a physical address for the Sixth Floor Musume
-
-reverseGeocode({lng: -96.8084, lat: 32.7799}), mapBoxToken).then(function(result)
+// TODO TOGETHER: Reverse Geocoding: Using the reverse geocoding method, enter the coordinates {lng: -96.8084, lat: 32.7799} to get a physical address for the Sixth Floor Musumem
 
 
 // TODO: Reverse geocode coordinates of your choice using the reverse geocode method
