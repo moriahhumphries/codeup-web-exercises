@@ -34,9 +34,11 @@ restaurants.forEach(function(restaurant, index) {
 
 });
 
+
 var chiMarker = new mapboxgl.Marker(markerOptions)
     .setLngLat([-96.839450, 32.951550])
     .addTo(map);
+
 
 var pluMarker = new mapboxgl.Marker(markerOptions)
     .setLngLat([-96.830040, 32.968610])
@@ -51,7 +53,6 @@ var zoeMarker = new mapboxgl.Marker(markerOptions)
 map.on('click', function () {
     var favoriteRestaurant = new mapboxgl.Popup()
         .setHTML("<h3>Taste of Chicago</h3>")
-        .setText(restaurants[0])
         .addTo(map);
 
     chiMarker.setPopup(favoriteRestaurant);
