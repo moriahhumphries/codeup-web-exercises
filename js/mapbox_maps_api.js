@@ -13,6 +13,27 @@ var markerOptions = {
 
 };
 
+var restaurants = [
+    {
+        name: 'Taste of Chicago',
+        food: 'Deep dish pizza'
+    },
+    {
+        name: 'Pluckers',
+        food: 'Chicken wings'
+    },
+    {
+        name: 'Zoe\'s Kitchen',
+        food: 'Mediterranean'
+    },
+];
+
+restaurants.forEach(function(restaurant, index) {
+    console.log('Name: ' + (restaurant.name));
+    console.log('Food: ' + restaurant.food);
+
+});
+
 var chiMarker = new mapboxgl.Marker(markerOptions)
     .setLngLat([-96.839450, 32.951550])
     .addTo(map);
@@ -25,9 +46,12 @@ var zoeMarker = new mapboxgl.Marker(markerOptions)
     .setLngLat([-96.802800, 32.895770])
     .addTo(map);
 
+
+
 map.on('click', function () {
     var favoriteRestaurant = new mapboxgl.Popup()
         .setHTML("<h3>Taste of Chicago</h3>")
+        .setText(restaurants[0])
         .addTo(map);
 
     chiMarker.setPopup(favoriteRestaurant);
@@ -49,3 +73,4 @@ map.on('click', function () {
 
     zoeMarker.setPopup(zoeRestaurant);
 });
+
