@@ -15,4 +15,20 @@
 
 // class selectors
 
-$('.codeup').css('border', '1px solid red')
+// $('.codeup')
+
+// element selectors
+
+$('li').css('font-size', '20px');
+
+// $('h1');
+// $('p');
+// $('li');
+
+var alert3 = $('h1').html();
+alert(alert3);
+
+
+
+
+
