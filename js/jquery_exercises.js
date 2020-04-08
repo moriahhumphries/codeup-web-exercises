@@ -21,14 +21,16 @@
 
 $('li').css('font-size', '20px');
 
-// $('h1');
-// $('p');
-// $('li');
+$('h1').css('background-color', 'yellow');
+$('p').css('background-color', 'yellow');
+$('li').css('background-color', 'yellow');
 
 var alert3 = $('h1').html();
 alert(alert3);
 
-
+var alert4 = $('h1', 'p', 'li').html();
+console.log(alert4);
+// alert(alert3);
 
 
 
