@@ -1,0 +1,9 @@
+h1, h2{
+    text-align: center;
+    background-color: rgba(129, 23, 77, 0.38);
+    color: white;
+}
+
+body {
+    background-color: rgba(59, 148, 217, 0.52);
+}
