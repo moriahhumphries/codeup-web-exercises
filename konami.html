@@ -6,6 +6,8 @@
 <body>
 <h1>Konami Code</h1>
 
+<p>Enter the Konami Code and hit "enter"! </p>
+
 <script src="js/jquery.js"></script>
 <script>
     "use strict";
@@ -14,7 +16,32 @@
         console.log(event.which);
     });
 
-    // 38, 38, 40, 40, 37, 39, 37, 39, 66, 65
+        // konami = "38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13";
+
+    function konami(fn) {
+        var input = "";
+        var pattern = "3838404037393739666513";
+        $(document).keydown(function(e) {
+            input += e.which;
+            if (input.indexOf(pattern) !== -1) {
+                fn();
+                input = "";
+            }
+        });
+    }
+    $(document).ready(function() {
+        konami(function() {
+            alert("You have added 30 lives!");
+        });
+    });
+
+    // $.getScript('http://www.cornify.com/js/cornify.js',function(){
+    //     cornify_add();
+    //     $(document).keydown(cornify_add);
+    // });
+
+
+
 </script>
 </body>
 </html>
