@@ -32,6 +32,22 @@
 
 // $('h1, p, li').css('background-color', 'yellow');
 
-$('h1').click(function () {
+$('h1').click(function() {
     $('h1').css('background-color', 'pink')
-})
+});
+
+$('p').dblclick(function() {
+    $('p').css('font-size', '18px')
+});
+
+
+
+var inHandler = function () {
+    $('li').css('color', 'red')
+};
+
+var outHandler = function () {
+    $('li').css('color', 'black')
+};
+
+$('li').hover(inHandler, outHandler);
