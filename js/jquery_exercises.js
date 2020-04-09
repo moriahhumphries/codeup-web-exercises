@@ -40,14 +40,21 @@ $('p').dblclick(function() {
     $('p').css('font-size', '18px')
 });
 
+$('li').hover(
+    function() {
+        $('li').css('color', 'red');
+    },
+    function() {
+        $('li').css('color', 'black');
+    }
+);
 
-
-var inHandler = function () {
-    $('li').css('color', 'red')
-};
-
-var outHandler = function () {
-    $('li').css('color', 'black')
-};
-
-$('li').hover(inHandler, outHandler);
+// var inHandler = function () {
+// //     $('li').css('color', 'red')
+// // };
+// //
+// // var outHandler = function () {
+// //     $('li').css('color', 'black')
+// // };
+// //
+// // $('li').hover(inHandler, outHandler);
