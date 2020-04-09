@@ -30,7 +30,8 @@
 
 // mulitple selectors
 
-$('h1, p, li').css('background-color', 'yellow');
+// $('h1, p, li').css('background-color', 'yellow');
 
-
-
+$('h1').click(function () {
+    $('h1').css('background-color', 'pink')
+})
