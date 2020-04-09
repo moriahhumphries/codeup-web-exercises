@@ -4,9 +4,9 @@
     <title>Konami Code</title>
 </head>
 <body>
-<h1>Konami Code</h1>
+<h1 id="main-header">Konami Code</h1>
 
-<p>Enter the Konami Code and hit "enter"! </p>
+<h2>Enter the Konami Code and hit "enter"! </h2>
 
 <script src="js/jquery.js"></script>
 <script>
@@ -17,6 +17,8 @@
     });
 
         // konami = "38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13";
+
+    $('#main-header').css('font-size', '60px');
 
     function konami(fn) {
         var input = "";
@@ -33,7 +35,7 @@
         konami(function() {
             alert("You have added 9 lives!");
             $('body').css('background-image', 'url("https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif"');
-            $('h1, p').css('color', 'pink');
+            $('h1, h2').css('color', 'pink');
         });
     });
     // $('document').css('background-image', 'url("https://gph.is/g/EJgkj7e"')
