@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>National Parks</title>
+<style>
+    .invisible {
+       visibility: hidden;
+    }
+
+    .highlighter {
+        background-color: #ffed83;
+    }
+
+</style>
+</head>
+<body>
+<div id="list">
+    <dl>
+        <dt>10 FAQs About National Parks</dt>
+        <br>
+        <dt>Do they have natural elements?</dt>
+        <dd>They do!</dd>
+        <br>
+        <dt>Can they have trees?</dt>
+        <dd>They can!</dd>
+        <br>
+        <dt>Do some have sand?</dt>
+        <dd>Potentially!</dd>
+        <br>
+        <dt>What type of shoes should I wear?</dt>
+        <dd>Sturdy shoes</dd>
+        <br>
+        <dt>How much does it cost to enter?</dt>
+        <dd>$25</dd>
+        <br>
+        <dt>Can I camp in the parks?</dt>
+        <dd>Yes, at your own risk</dd>
+        <br>
+        <dt>Are they open every day?</dt>
+        <dd>Usually!</dd>
+        <br>
+        <dt>Are they open in all weather?</dt>
+        <dd>Yes, but please be weather aware</dd>
+        <br>
+        <dt>Will I need to pay for parking?</dt>
+        <dd>In some parks, yes</dd>
+        <br>
+        <dt>How big are the parks?</dt>
+        <dd>Real big!</dd>
+        <br>
+
+    </dl>
+    <button id="invisibility">Show Answers</button>
+</div>
+
+
+
+
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script>
+   $('dd').addClass('invisible');
+
+
+
+   $('#invisibility').click(function(){
+       $('dd').toggleClass('invisible');
+   });
+
+   $('dt').click(function(){
+       console.log('clicked');
+       $(this).toggleClass('highlighter');
+   });
+
+
+
+
+
+$(document).ready(function() {
+    console.log('ready');
+});
+
+
+
+</script>
+</body>
+</html>
