@@ -16,6 +16,9 @@
         background-color: #f2ff48;
     }
 
+    .bold {
+        font-weight: bold;
+    }
 </style>
 </head>
 <body>
@@ -112,6 +115,9 @@
        $(this).toggleClass('highlighter');
 
    });
+
+   // Adding highlight to last Li's - DONE
+
     $('ul').addClass('fact-list');
 
 
@@ -124,13 +130,14 @@
 
 
 
-   // $('li').children('ul')
+
 
 
     // Bold H3's Li's - DONE
+
     $('h3').click(function(){
         console.log('clicked');
-        $('li').css('font-weight', 'bold');
+        $('li').addClass('bold');
     });
 
 
@@ -139,7 +146,9 @@
 
     $('ul').click(function(){
         console.log('clicked');
-        $('li').first().css('color', 'blue');
+        $('#big-bend-facts').children().first().css('color', 'blue');
+        $('#davis-mountains-facts').children().first().css('color', 'blue');
+        $('#enchanted-rocks-facts').children().first().css('color', 'blue');
     });
 
 
