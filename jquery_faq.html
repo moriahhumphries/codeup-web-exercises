@@ -66,7 +66,7 @@
 <h2>State Parks of Texas</h2>
 
 
-    <h3>Big Bend</h3>
+    <h3 id="big-bend">Big Bend</h3>
     <ul id="big-bend-facts">
         <li>Located near Terlingua, Texas</li>
         <li>Covers 300,000 acres</li>
@@ -74,7 +74,7 @@
         <li>Has 5,500 foot paved airstrip</li>
     </ul>
 
-    <h3>Davis Mountains</h3>
+    <h3 id="davis-mountains">Davis Mountains</h3>
     <ul id="davis-mountains-facts">
         <li>Located near Fort Davis, Texas</li>
         <li>Built by the Civilian Conversation Corps</li>
@@ -82,7 +82,7 @@
         <li>Has miles of trails</li>
     </ul>
 
-    <h3>Enchanted Rock</h3>
+    <h3 id="enchanted-rock">Enchanted Rock</h3>
     <ul id="enchanted-rocks-facts">
         <li>Located near Fredericksburg, TX</li>
         <li>Covers 1640 acres</li>
@@ -135,23 +135,50 @@
 
     // Bold H3's Li's - DONE
 
-    $('h3').click(function(){
+    // $('h3').click(function(){
+    //     console.log('clicked');
+    //     $('li').addClass('bold');
+    // });
+    $('#big-bend').click(function(){
         console.log('clicked');
-        $('li').addClass('bold');
+        $('#big-bend-facts').addClass('bold');
+    });
+
+    $('#davis-mountains').click(function(){
+        console.log('clicked');
+        $('#davis-mountains-facts').addClass('bold');
+    });
+
+    $('#enchanted-rock').click(function(){
+        console.log('clicked');
+        $('#enchanted-rocks-facts').toggleClass('bold');
     });
 
 
 
 // 1st Li of parent ul should turn blue -
 
-    $('ul').click(function(){
+    // $('ul').click(function(){
+    //     console.log('clicked');
+    //     $('#big-bend-facts').children().first().css('color', 'blue');
+    //     $('#davis-mountains-facts').children().first().css('color', 'blue');
+    //     $('#enchanted-rocks-facts').children().first().css('color', 'blue');
+    // });
+
+    $('#big-bend-facts').click(function(){
         console.log('clicked');
         $('#big-bend-facts').children().first().css('color', 'blue');
-        $('#davis-mountains-facts').children().first().css('color', 'blue');
-        $('#enchanted-rocks-facts').children().first().css('color', 'blue');
     });
 
+        $('#davis-mountains-facts').click(function(){
+            console.log('clicked');
+            $('#davis-mountains-facts').children().first().css('color', 'blue');
+        });
 
+            $('#enchanted-rocks-facts').click(function(){
+                console.log('clicked');
+                $('#enchanted-rocks-facts').children().first().css('color', 'blue');
+            });
 
 </script>
 </body>
