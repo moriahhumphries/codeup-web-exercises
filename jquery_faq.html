@@ -64,7 +64,7 @@
 
 
     <h3>Big Bend</h3>
-    <ul>
+    <ul id="big-bend-facts">
         <li>Located near Terlingua, Texas</li>
         <li>Covers 300,000 acres</li>
         <li>Opened to the public in 2007</li>
@@ -72,7 +72,7 @@
     </ul>
 
     <h3>Davis Mountains</h3>
-    <ul>
+    <ul id="davis-mountains-facts">
         <li>Located near Fort Davis, Texas</li>
         <li>Built by the Civilian Conversation Corps</li>
         <li>Opened in the 1930s</li>
@@ -80,7 +80,7 @@
     </ul>
 
     <h3>Enchanted Rock</h3>
-    <ul>
+    <ul id="enchanted-rocks-facts">
         <li>Located near Fredericksburg, TX</li>
         <li>Covers 1640 acres</li>
         <li>Opened in 1978</li>
@@ -110,14 +110,19 @@
    $('dt').click(function(){
        console.log('clicked');
        $(this).toggleClass('highlighter');
+
    });
+    $('ul').addClass('fact-list');
+
 
     $('#highlight-last').click(function(){
         console.log('clicked')
-        $('.facts').children().last().toggleClass('last');
+        $('#big-bend-facts').children().last().toggleClass('last');
+        $('#davis-mountains-facts').children().last().toggleClass('last');
+        $('#enchanted-rocks-facts').children().last().toggleClass('last');
     });
 
-    $('ul').addClass('facts');
+
 
    // $('li').children('ul')
 
