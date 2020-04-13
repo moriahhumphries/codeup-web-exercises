@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>National Parks</title>
+<style>
+    .invisible {
+       visibility: hidden;
+    }
+</style>
+</head>
+<body>
+<div id="list">
+    <dl>
+        <dt>10 FAQs About National Parks</dt>
+        <dd>Do they have natural elements?</dd>
+        <dd>Can they have trees?</dd>
+        <dd>Do some have sand?</dd>
+        <dd>What type of shoes should I wear?</dd>
+        <dd>How much does it cost to enter?</dd>
+        <dd>Can I camp in the parks?</dd>
+        <dd>Are they open every day?</dd>
+        <dd>Are they open in all weather?</dd>
+        <dd>Will I need to pay for parking?</dd>
+        <dd>How big are the parks?</dd>
+
+    </dl>
+    <button id="invisibility">Change</button>
+</div>
+
+
+
+
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script>
+   $('dd').addClass('invisible');
+   // $('#invisibility').toggleClass('.invisible');
+
+   $('#invisibility').click(function(){
+       $('dd').toggleClass('invisible');
+   });
+
+
+
+
+
+
+
+$(document).ready(function() {
+    console.log('ready');
+});
+
+
+
+</script>
+</body>
+</html>
