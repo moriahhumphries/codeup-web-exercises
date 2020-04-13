@@ -12,6 +12,10 @@
         background-color: #ffed83;
     }
 
+    .last {
+        background-color: #f2ff48;
+    }
+
 </style>
 </head>
 <body>
@@ -54,89 +58,48 @@
     <button id="invisibility">Show Answers</button>
 </div>
 
-<ul id="national-parks">
-    <li>Arches</li>
-        <ul>
-            <li>Located in Utah</li>
-            <li>Covers 119 square miles</li>
-            <li>Became a National Park in 1971</li>
-            <li>Has over 2,000 arches</li>
-        </ul>
-    <li>Badlands</li>
-    <ul>
-        <li>Located in South Dakota</li>
-        <li>Covers 244,300 acres</li>
-        <li>Became a National Park in 1978</li>
-        <li>Has a $25 entrance fee per week</li>
-    </ul>
-    <li>Carlsbad Caverns</li>
-    <ul>
-        <li>Located in New Mexico</li>
-        <li>Covers 33,000 acres</li>
-        <li>Became a National Park in 1930</li>
-        <li>Has 120 known caves</li>
-    </ul>
-    <li>Denali</li>
-    <ul>
-        <li>Located in Alaska</li>
-        <li>Covers 6,075,106 acres</li>
-        <li>Became a National Park in 1917</li>
-        <li>Has 400,000 visitors per year</li>
-    </ul>
-    <li>Everglades</li>
-    <ul>
-        <li>Located in Alaska</li>
-        <li>Covers 1,507,850 acres</li>
-        <li>Became a National Park in 1934</li>
-        <li>Lowest elevation is 0 feet</li>
-    </ul>
-</ul>
-<h3>State Parks of Texas</h3>
-<ul id="state-parks-texas">
-    <li>Abilene</li>
-    <ul>
-        <li>Located near Abilene, Texas</li>
-        <li>Covers 529 acres</li>
-        <li>Opened in 1934</li>
-        <li>Has a no-wake lake</li>
-    </ul>
-    <li>Big Bend</li>
+
+
+<h2>State Parks of Texas</h2>
+
+
+    <h3>Big Bend</h3>
     <ul>
         <li>Located near Terlingua, Texas</li>
         <li>Covers 300,000 acres</li>
         <li>Opened to the public in 2007</li>
         <li>Has 5,500 foot paved airstrip</li>
     </ul>
-    <li>Choke Canyon</li>
-    <ul>
-        <li>Located near Calliham, Texas</li>
-        <li>On the shore o the Choke Canyon Reservoir</li>
-        <li>Opened in 1986</li>
-        <li>Archaic age sites have been found</li>
-    </ul>
-    <li>Davis Mountains</li>
+
+    <h3>Davis Mountains</h3>
     <ul>
         <li>Located near Fort Davis, Texas</li>
         <li>Built by the Civilian Conversation Corps</li>
         <li>Opened in the 1930s</li>
         <li>Has miles of trails</li>
     </ul>
-    <li>Enchanted Rock</li>
+
+    <h3>Enchanted Rock</h3>
     <ul>
         <li>Located near Fredericksburg, TX</li>
         <li>Covers 1640 acres</li>
         <li>Opened in 1978</li>
         <li>Has 250,000 visitors per year</li>
     </ul>
-</ul>
 
 
+<button id="highlight-last">Show Last Fact</button>
 
 
 
 <script type="text/javascript" src="js/jquery.js"></script>
 <script>
-   $('dd').addClass('invisible');
+
+    $(document).ready(function() {
+        console.log('ready');
+    });
+
+    $('dd').addClass('invisible');
 
 
 
@@ -149,13 +112,30 @@
        $(this).toggleClass('highlighter');
    });
 
+    $('#highlight-last').click(function(){
+        console.log('clicked')
+        $('.facts').children().last().toggleClass('last');
+    });
+
+    $('ul').addClass('facts');
+
+   // $('li').children('ul')
+
+
+    // Bold H3's Li's - DONE
+    $('h3').click(function(){
+        console.log('clicked');
+        $('li').css('font-weight', 'bold');
+    });
 
 
 
+// 1st Li of parent ul should turn blue -
 
-$(document).ready(function() {
-    console.log('ready');
-});
+    $('ul').click(function(){
+        console.log('clicked');
+        $('li').first().css('color', 'blue');
+    });
 
 
 
