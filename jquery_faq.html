@@ -22,6 +22,12 @@
 </style>
 </head>
 <body>
+<div id="newsletter">
+    <h1>Would you like to sign up for our newsletter? </h1>
+    <span>X</span>
+</div>
+
+
 <div id="list">
     <dl>
         <dt>10 FAQs About National Parks</dt>
@@ -101,6 +107,13 @@
     $(document).ready(function() {
         console.log('ready');
     });
+
+    // Hide H1 div
+
+    $('span').click(function() {
+        $('#newsletter').hide();
+    });
+
 
     $('dd').addClass('invisible');
 
