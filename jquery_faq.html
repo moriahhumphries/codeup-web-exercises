@@ -121,14 +121,18 @@
     $('ul').addClass('fact-list');
 
 
+    // $('#highlight-last').click(function(){
+    //     console.log('clicked')
+    //     $('#big-bend-facts').children().last().toggleClass('last');
+    //     $('#davis-mountains-facts').children().last().toggleClass('last');
+    //     $('#enchanted-rocks-facts').children().last().toggleClass('last');
+    // });
+
     $('#highlight-last').click(function(){
-        console.log('clicked')
-        $('#big-bend-facts').children().last().toggleClass('last');
-        $('#davis-mountains-facts').children().last().toggleClass('last');
-        $('#enchanted-rocks-facts').children().last().toggleClass('last');
+        $('ul').each(function(){
+            $(this).children().last().toggleClass('last');
+        });
     });
-
-
 
 
 
@@ -139,20 +143,24 @@
     //     console.log('clicked');
     //     $('li').addClass('bold');
     // });
-    $('#big-bend').click(function(){
-        console.log('clicked');
-        $('#big-bend-facts').addClass('bold');
-    });
+    // $('#big-bend').click(function(){
+    //     console.log('clicked');
+    //     $('#big-bend-facts').addClass('bold');
+    // });
+    //
+    // $('#davis-mountains').click(function(){
+    //     console.log('clicked');
+    //     $('#davis-mountains-facts').addClass('bold');
+    // });
+    //
+    // $('#enchanted-rock').click(function(){
+    //     console.log('clicked');
+    //     $('#enchanted-rocks-facts').toggleClass('bold');
+    // });
 
-    $('#davis-mountains').click(function(){
-        console.log('clicked');
-        $('#davis-mountains-facts').addClass('bold');
-    });
-
-    $('#enchanted-rock').click(function(){
-        console.log('clicked');
-        $('#enchanted-rocks-facts').toggleClass('bold');
-    });
+    $('h3').click(function() {
+            $(this).next().children().toggleClass('bold');
+        });
 
 
 
@@ -165,20 +173,24 @@
     //     $('#enchanted-rocks-facts').children().first().css('color', 'blue');
     // });
 
-    $('#big-bend-facts').click(function(){
-        console.log('clicked');
-        $('#big-bend-facts').children().first().css('color', 'blue');
-    });
+    // $('#big-bend-facts').click(function(){
+    //     console.log('clicked');
+    //     $('#big-bend-facts').children().first().css('color', 'blue');
+    // });
+    //
+    //     $('#davis-mountains-facts').click(function(){
+    //         console.log('clicked');
+    //         $('#davis-mountains-facts').children().first().css('color', 'blue');
+    //     });
+    //
+    //         $('#enchanted-rocks-facts').click(function(){
+    //             console.log('clicked');
+    //             $('#enchanted-rocks-facts').children().first().css('color', 'blue');
+    //         });
 
-        $('#davis-mountains-facts').click(function(){
-            console.log('clicked');
-            $('#davis-mountains-facts').children().first().css('color', 'blue');
+    $('li').click(function(){
+            $(this).parent().children().first().css('color', 'blue');
         });
-
-            $('#enchanted-rocks-facts').click(function(){
-                console.log('clicked');
-                $('#enchanted-rocks-facts').children().first().css('color', 'blue');
-            });
 
 </script>
 </body>
