@@ -23,6 +23,10 @@
     .fact-list {
         display: none;
     }
+
+    #register {
+        display: none;
+    }
 </style>
 </head>
 <body>
@@ -30,6 +34,8 @@
     <h1>Would you like to sign up for our newsletter? </h1>
     <span>X</span>
 </div>
+
+<h2 id="register">Please register for our site!</h2>
 
 
 <div id="list">
@@ -119,6 +125,11 @@
         $('#newsletter').hide();
     });
 
+    // Fade in H2 to register
+
+    $(document).ready(function() {
+        $('h2').delay(8000).fadeIn(2000);
+    });
 
     $('dd').addClass('invisible');
 
