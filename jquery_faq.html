@@ -190,16 +190,17 @@
     // });
 
     $('h3').click(function() {
-            $(this).next().children().toggleClass('bold');
+        $(this).next().children().toggleClass('bold');
+        $(this).next().slideToggle(1000).show();
         });
 
 
     // h3 Slide in on click
-
-    $('h3').click(function(){
-
-            $(this).next().slideToggle(1000).show();
-    });
+    //
+    // $('h3').click(function(){
+    //
+    //         $(this).next().slideToggle(1000).show();
+    // });
 
 
 // 1st Li of parent ul should turn blue -
