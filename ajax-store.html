@@ -12,8 +12,8 @@
         <tr>
             <th>Title</th>
             <th>Quantity</th>
-            <th>Price</th>
             <th>Categories</th>
+            <th>Price</th>
         </tr>
     </thead>
     <tbody id="insertProducts"></tbody>
@@ -25,14 +25,34 @@
 (function() {
     "use strict";
     // TODO: Create an ajax GET request for /data/inventory.json
-    $.ajax('data/inventory.json')
+    $.ajax('data/inventory.json').done(function(data) {
     // TODO: Take the data from inventory.json and append it to the products table
-    .done(function(data) {
-        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+
+        //       HINT: Your data should come back as a JSON object; use console.log() to inspect its contents and fields
         console.log(data);
-        //             its contents and fields
+        // Syntax - data[0].property
+        // OR data[0]["price"]
         //       HINT: You will want to target #insertProducts for your new HTML elements
-    });
+        var titles = {};
+        var quantity = {};
+        var categories = {};
+        var price = {};
+        var generatedHTML = "";
+
+        for (var x = 0; x <= data.length; x++) {
+            titles = data[x].title;
+            quantity = data[x]["quantity"];
+            categories = data[x]["categories"];
+            price = data[x]["price"];
+            generatedHTML = "<p>" + data[x].title + "</p>"  + "<p>" + data[x]["quantity"] + "</p>" +
+                "<p>" + data[x]["categories"] + "</p>" +
+                "<p>" + data[x]["price"] + "</p>" +
+                $("#insertProducts").append(generatedHTML);
+
+        }
+    })
+
+
 })();
 </script>
 
