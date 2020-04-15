@@ -39,18 +39,33 @@
         var price = {};
         var generatedHTML = "";
 
-        for (var x = 0; x <= data.length; x++) {
-            titles = data[x].title;
-            quantity = data[x]["quantity"];
-            categories = data[x]["categories"];
-            price = data[x]["price"];
-            generatedHTML = "<p>" + data[x].title + "</p>"  + "<p>" + data[x]["quantity"] + "</p>" +
-                "<p>" + data[x]["categories"] + "</p>" +
-                "<p>" + data[x]["price"] + "</p>" +
-                $("#insertProducts").append(generatedHTML);
+        // for (var x = 0; x <= data.length; x++) {
+        //     titles = data[x].title;
+        //     quantity = data[x]["quantity"];
+        //     categories = data[x]["categories"];
+        //     price = data[x]["price"];
+        //     generatedHTML = "<tr>" + "<td>" + titles + "</td>"
+        //         + "<td>" + quantity + "</td>"
+        //         + "<td>" + categories + "</td>"
+        //         + "<td>" + price + "</td>" + "</tr>"
+        //         + $("#insertProducts").append(generatedHTML);
+        // console.log(x);
+        // }
 
-        }
-    })
+        data.forEach(function(ele){
+            titles = ele.title;
+            quantity = ele.quantity;
+            categories = ele.categories;
+            price = ele.price;
+            generatedHTML = "<tr>" + "<td>" + titles + "</td>"
+                    + "<td>" + quantity + "</td>"
+                    + "<td>" + categories + "</td>"
+                    + "<td>" + price + "</td>" + "</tr>"
+                    + $("#insertProducts").append(generatedHTML);
+            console.log(ele);
+
+        })
+    });
 
 
 })();
