@@ -17,17 +17,37 @@
 <script>
     "use strict";
     (function() {
-        $.ajax('data/inventory.json').done(function(data) {
+        var restHtml = "";
 
-        data.forEach(function(tool) {
-            HTML = "<tr>" +
-                "            <td>" + tool.title + "</td>" +
-                "            <td>" + tool.quantity + "</td>" +
-                "            <td>$" + tool.price + "</td>" +
-                "            <td>" + tool.categories + "</td>" +
-                "        </tr>";
-            $("#insertProducts").append(HTML);
-        });
+        $.ajax("data/blog.json")
+            .done(function(blogPosts){
+
+                $("#posts").empty();
+
+                var pillsHTML;
+
+                blogPosts.forEach(function(blogPost){
+                    pillsHTML = "";
+                    blogPost.categories.forEach(function(category){
+
+                        pillsHTML += "<span class=\"badge badge-pill badge-primary\">"+category+"</span>\n";
+
+                    });
+                    restHtml = " <div class=\"card\">\n" +
+                        "        <img src=\"https://via.placeholder.com/250\" class=\"card-img-top\" alt=\"https://via.placeholder.com/250\">\n" +
+                        "        <div class=\"card-body\">\n" +
+                        "            <h5 class=\"card-title\">"+blogPost.title+"</h5>\n" +
+                        "            <p class=\"card-text\">"+blogPost.content+"</p>\n" +
+                        "            <p class=\"card-text\"><small class=\"text-muted\">"+blogPost.date+"</small></p>\n" + pillsHTML +
+                        "        </div>\n" +
+                        "    </div>";
+                    $("#posts").append(restHtml);
+
+                });
+            })
+            .fail(function(errors){
+                console.error(errors);
+            });
 
     })();
 </script>
