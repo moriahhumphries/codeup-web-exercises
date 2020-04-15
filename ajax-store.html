@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Online Store</title>
+
 </head>
 <body>
 
@@ -16,9 +17,12 @@
             <th>Price</th>
         </tr>
     </thead>
-    <tbody id="insertProducts"></tbody>
+    <tbody id="insertProducts"> <tr>
+      </tbody>
 </table>
+<button id="update">Update</button>
 
+<script src="js/jquery.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <script>
@@ -32,12 +36,13 @@
         console.log(data);
         // Syntax - data[0].property
         // OR data[0]["price"]
+
         //       HINT: You will want to target #insertProducts for your new HTML elements
         var titles = {};
         var quantity = {};
         var categories = {};
         var price = {};
-        var generatedHTML = "";
+        var HTML = "";
 
         // for (var x = 0; x <= data.length; x++) {
         //     titles = data[x].title;
@@ -57,14 +62,16 @@
             quantity = ele.quantity;
             categories = ele.categories;
             price = ele.price;
-            generatedHTML = "<tr>" + "<td>" + titles + "</td>"
+            HTML = "<tr>"
+                    + "<td>" + titles + "</td>"
                     + "<td>" + quantity + "</td>"
                     + "<td>" + categories + "</td>"
-                    + "<td>" + price + "</td>" + "</tr>"
-                    + $("#insertProducts").append(generatedHTML);
+                    + "<td>" + price + "</td>"
+                        + "</tr>"
+                    + $("#insertProducts").append(HTML);
             console.log(ele);
 
-        })
+        });
     });
 
 
