@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map</title>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/keys.js"></script>
+
+<script>
+
+$.get("http://api.openweathermap.org/data/2.5/weather", {
+    "APPID": weatherKey,
+    "q":     "Dallas, US",
+    "units": "imperial"
+}).done(function(data){
+    console.log(data);
+}).fail(function(errors){
+    console.error(errors);
+});
+
+</script>
+</body>
+</html>
