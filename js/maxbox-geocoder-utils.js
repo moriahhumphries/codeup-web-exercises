@@ -1,5 +1,3 @@
-
-
 "use strict";
 
 /***
@@ -15,7 +13,6 @@
  *  })
  *
  */
-
 function geocode(search, token) {
     var baseUrl = 'https://api.mapbox.com';
     var endPoint = '/geocoding/v5/mapbox.places/';
@@ -26,8 +23,7 @@ function geocode(search, token) {
         }).then(function(data) {
             return data.features[0].center;
         });
-
-
+}
 
 
 /***
@@ -54,5 +50,4 @@ function reverseGeocode(coordinates, token) {
         .then(function(data) {
             return data.features[0].place_name;
         });
-}
 }
