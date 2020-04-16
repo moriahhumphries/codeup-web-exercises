@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Weather Map</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="css/weather-style.css">
 </head>
 
@@ -11,7 +13,7 @@
 
 <!--Top Bar-->
 
-<div class="navbar navbar-light bg-primary text-white mt-3 mb-2 p-2"><span id="page-title">Weather App</span><span id="current-city">Current City: HOLD</span></div>
+<div class="navbar navbar-light bg-primary text-white mt-3 mb-4 p-2"><span id="page-title">Weather App</span><span id="current-city">Current City: HOLD</span></div>
 
 <!--Input Form, search for city-->
 
@@ -29,6 +31,9 @@
 <div id="weather-1" class="card-deck p-3">
 </div>
 
+<pre id="coordinates" class="coordinates"></pre>
+<!--Weather Map-->
+<div id='map' style='width: 100%; height: 300px;'></div>
 
 <script src="js/jquery.js"></script>
 
@@ -73,6 +78,8 @@ function displayWeather(){
 displayWeather();
 
 </script>
+<script src="js/mapbox-weather.js"></script>
+<script src="js/maxbox-geocoder-utils.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
