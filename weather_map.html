@@ -46,14 +46,14 @@ function displayWeather(){
         var HTML = "";
         data.list.forEach(function (ele,ind) {
             if(ind % 8 === 0) {
-                HTML = "<tr>" +
-                    "<td>" + ele.dt_txt + "</td>" +
-                    "<td>" + ele.main.temp_min + ' ' + ele.main.temp + " " + "</td>" +
-                    "<td>" + ele.weather[0].description + "</td>" +
-                    "<td>" + ele.main.humidity + "</td>" +
-                    "<td>" + ele.wind.speed + "</td>" +
-                    "<td>" + ele.main.pressure + "</td>" +
-                    "</tr>";
+                HTML = "<div>" +
+                    "<p>" + ele.dt_txt + "</p>" +
+                    "<p>" + "High/Low Temperature:" + " " + ele.main.temp_min + ' ' + ele.main.temp + " " + "</p>" +
+                    "<p>" + "Description:" + " " + ele.weather[0].description + "</p>" +
+                    "<p>" + "Humidity:" + " " + ele.main.humidity + "</p>" +
+                    "<p>" + "Wind:" + " " + ele.wind.speed + "</p>" +
+                    "<p>" + "Pressure:" + " " + ele.main.pressure + "</p>" +
+                    "</div>";
                 $("#weather-1").append(HTML);
             }
         });
