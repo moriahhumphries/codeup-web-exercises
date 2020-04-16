@@ -46,13 +46,14 @@ function displayWeather(){
         var HTML = "";
         data.list.forEach(function (ele,ind) {
             if(ind % 8 === 0) {
-                HTML = "<div>" +
-                    "<p>" + ele.dt_txt + "</p>" +
-                    "<p>" + "High/Low Temperature:" + " " + ele.main.temp_min + ' ' + ele.main.temp + " " + "</p>" +
-                    "<p>" + "Description:" + " " + ele.weather[0].description + "</p>" +
-                    "<p>" + "Humidity:" + " " + ele.main.humidity + "</p>" +
-                    "<p>" + "Wind:" + " " + ele.wind.speed + "</p>" +
-                    "<p>" + "Pressure:" + " " + ele.main.pressure + "</p>" +
+                HTML = "<div class=\"card\" style=\"width: 18rem;\">" + "<div class=\"card-header\">" +
+                    "<h6>" + ele.dt_txt + "</h6>" +
+                        "</div>" + "<ul class=\"list-group list-group-flush\">" +
+                    "<li class=\"list-group-item\">" + "High/Low Temperature:" + " " + ele.main.temp_min + " " + "/"+ " " +  + ele.main.temp + " " + "</li>" +
+                    "<li class=\"list-group-item\">" + "Description:" + " " + ele.weather[0].description + "</li>" +
+                    "<li class=\"list-group-item\">" + "Humidity:" + " " + ele.main.humidity + "</li>" +
+                    "<li class=\"list-group-item\">" + "Wind:" + " " + ele.wind.speed + "</li>" +
+                    "<li class=\"list-group-item\">" + "Pressure:" + " " + ele.main.pressure + "</li>" + "</ul>" +
                     "</div>";
                 $("#weather-1").append(HTML);
             }
