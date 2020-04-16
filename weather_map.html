@@ -7,11 +7,24 @@
     <link rel="stylesheet" href="css/weather-style.css">
 </head>
 
-<body>
+
+
+<!--Top Bar-->
 
 <div class="navbar navbar-light bg-primary text-white mt-3 mb-2 p-2"><span id="page-title">Weather App</span><span id="current-city">Current City: HOLD</span></div>
 
-<div id="search-box"><button class="btn btn-primary" type="submit">Search</button></div>
+<!--Input Form, search for city-->
+
+<div id="input-form"><form>
+    <div class="form-group form-inline ml-3">
+        <label for="formGroupExampleInput" id="search">Place</label>
+        <input type="text" class="form-control ml-3" id="formGroupExampleInput" placeholder="Enter city">
+    <button class="btn btn-primary ml-3" type="submit">Search</button>
+    </div>
+</form>
+</div>
+
+<!--Cards with 5 day weather-->
 
 <div id="weather-1" class="card-deck p-3">
 </div>
