@@ -9,21 +9,51 @@
 
 <body>
 
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+        Featured
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+    </ul>
+</div>
+
+
+
+
+
+
 <script src="js/jquery.js"></script>
 
 <script src="js/keys.js"></script>
 
 <script>
 
-$.get("http://api.openweathermap.org/data/2.5/weather", {
+$.get("http://api.openweathermap.org/data/2.5/forecast", {
     "APPID": weatherKey,
     "q":     "Dallas, US",
     "units": "imperial"
 }).done(function(data){
     console.log(data);
+    console.log(data[0]);
 }).fail(function(errors){
     console.error(errors);
 });
+
+// Testing object
+let date = {};
+
+let temperature = {};
+// (data.main.temp)
+let humidity = {};
+// (data.main.humidity)
+let wind = {};
+// (data.wind.speed)
+let pressure = {};
+// (data.main.pressure)
+
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
