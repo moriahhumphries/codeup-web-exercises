@@ -9,19 +9,11 @@
 
 <body>
 
-<div class="card" style="width: 18rem;">
-    <div class="card-header">
-        Featured
-    </div>
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Vestibulum at eros</li>
-    </ul>
-</div>
+<div class="navbar navbar-light bg-primary text-white mt-3 mb-2 p-2"><span id="page-title">Weather App</span><span id="current-city">Current City: HOLD</span></div>
 
-<div id="weather-1">
+<div id="search-box"><button class="btn btn-primary" type="submit">Search</button></div>
 
+<div id="weather-1" class="card-deck p-3">
 </div>
 
 
@@ -46,8 +38,8 @@ function displayWeather(){
         var HTML = "";
         data.list.forEach(function (ele,ind) {
             if(ind % 8 === 0) {
-                HTML = "<div class=\"card\" style=\"width: 18rem;\">" + "<div class=\"card-header\">" +
-                    "<h6>" + ele.dt_txt + "</h6>" +
+                HTML = "<div class=\"card\" style=\"width: 100%;\">" + "<div class=\"card-header\">" +
+                    "<h6>" + ele.dt_txt.split(" ")[0] + "</h6>" +
                         "</div>" + "<ul class=\"list-group list-group-flush\">" +
                     "<li class=\"list-group-item\">" + "High/Low Temperature:" + " " + ele.main.temp_min + " " + "/"+ " " +  + ele.main.temp + " " + "</li>" +
                     "<li class=\"list-group-item\">" + "Description:" + " " + ele.weather[0].description + "</li>" +
