@@ -20,6 +20,10 @@
     </ul>
 </div>
 
+<div id="weather-1">
+
+</div>
+
 
 
 
@@ -37,22 +41,54 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
     "units": "imperial"
 }).done(function(data){
     console.log(data);
-    console.log(data[0]);
 }).fail(function(errors){
     console.error(errors);
-});
+
 
 // Testing object
-let date = {};
+// let date = {};
+// // // (data.list[0].dt_txt)
+// let temperature = {};
+// // // (data.list[0].main.temp)
+// let humidity = {};
+// // // (data.list[0].main.humidity)
+// let wind = {};
+// // // (data.list[0].wind.speed)
+// let pressure = {};
+// // (data.list[0].main.pressure)
 
-let temperature = {};
-// (data.main.temp)
-let humidity = {};
-// (data.main.humidity)
-let wind = {};
-// (data.wind.speed)
-let pressure = {};
-// (data.main.pressure)
+//     data.forEach(function(ele) {
+//         date = ele.data.list[0].dt_txt;
+//         temperature = ele.data.list[0].main.temp;
+//         humidity = ele.data.list[0].main.humidity;
+//         wind = data.list[0].wind.speed;
+//         pressure = ele.data.list[0].main.pressure;
+//         HTML = "<tr>"
+//             + "<td>" + date + "</td>"
+//             + "<td>" + temperature + "</td>"
+//             + "<td>" + humidity + "</td>"
+//             + "<td>" + wind + "</td>"
+//             + "<td>" + pressure + "</td>"
+//             + "</tr>"
+//             + $("#weather-1").append(HTML);
+//         console.log(ele);
+//     });
+// });
+
+    data.forEach(function() {
+        HTML = "<tr>" +
+            "<td>" + data.list[0].dt_txt + "</td>" +
+            "<td>" + data.list[0].main.temp + "</td>" +
+            "<td>" + data.list[0].main.humidity + "</td>" +
+            "<td>" + data.list[0].wind.speed + "</td>" +
+            "<td>" + data.list[0].main.pressure + "</td>" +
+            "</tr>";
+        $("#weather-1").append(HTML);
+    });
+});
+
+
+
 
 </script>
 
