@@ -72,7 +72,7 @@
         coordinates.style.display = 'block';
         coordinates.innerHTML =
             'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
-    displayWeather()
+    displayWeather();
     }
     marker.on('dragend', onDragEnd);
 
@@ -87,6 +87,7 @@ function displayWeather(){
         console.log(data)
 
         var HTML = "";
+        $("#weather-1").empty();
         data.list.forEach(function (ele,ind) {
             if(ind % 8 === 0) {
                 HTML = "<div class=\"card\" style=\"width: 100%;\">" + "<div class= \"card-header\">" +
