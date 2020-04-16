@@ -25,73 +25,48 @@
 </div>
 
 
-
-
-
-
 <script src="js/jquery.js"></script>
 
 <script src="js/keys.js"></script>
 
+
 <script>
 
-$.get("http://api.openweathermap.org/data/2.5/forecast", {
-    "APPID": weatherKey,
-    "q":     "Dallas, US",
-    "units": "imperial"
-}).done(function(data){
-    console.log(data);
-}).fail(function(errors){
-    console.error(errors);
+    "use strict";
 
 
-// Testing object
-// let date = {};
-// // // (data.list[0].dt_txt)
-// let temperature = {};
-// // // (data.list[0].main.temp)
-// let humidity = {};
-// // // (data.list[0].main.humidity)
-// let wind = {};
-// // // (data.list[0].wind.speed)
-// let pressure = {};
-// // (data.list[0].main.pressure)
+function displayWeather(){
+    $.get("http://api.openweathermap.org/data/2.5/forecast", {
+        "APPID": weatherKey,
+        "q": "Dallas, US",
+        "units": "imperial"
+    }).done(function (data) {
+        console.log(data)
 
-//     data.forEach(function(ele) {
-//         date = ele.data.list[0].dt_txt;
-//         temperature = ele.data.list[0].main.temp;
-//         humidity = ele.data.list[0].main.humidity;
-//         wind = data.list[0].wind.speed;
-//         pressure = ele.data.list[0].main.pressure;
-//         HTML = "<tr>"
-//             + "<td>" + date + "</td>"
-//             + "<td>" + temperature + "</td>"
-//             + "<td>" + humidity + "</td>"
-//             + "<td>" + wind + "</td>"
-//             + "<td>" + pressure + "</td>"
-//             + "</tr>"
-//             + $("#weather-1").append(HTML);
-//         console.log(ele);
-//     });
-// });
+        var HTML = "";
+        data.list.forEach(function (ele,ind) {
+            if(ind % 8 === 0) {
+                HTML = "<tr>" +
+                    "<td>" + ele.dt_txt + "</td>" +
+                    "<td>" + ele.main.temp_min + ' ' + ele.main.temp + " " + "</td>" +
+                    "<td>" + ele.weather[0].description + "</td>" +
+                    "<td>" + ele.main.humidity + "</td>" +
+                    "<td>" + ele.wind.speed + "</td>" +
+                    "<td>" + ele.main.pressure + "</td>" +
+                    "</tr>";
+                $("#weather-1").append(HTML);
+            }
+        });
 
-    data.forEach(function() {
-        HTML = "<tr>" +
-            "<td>" + data.list[0].dt_txt + "</td>" +
-            "<td>" + data.list[0].main.temp + "</td>" +
-            "<td>" + data.list[0].main.humidity + "</td>" +
-            "<td>" + data.list[0].wind.speed + "</td>" +
-            "<td>" + data.list[0].main.pressure + "</td>" +
-            "</tr>";
-        $("#weather-1").append(HTML);
+
+    }).fail(function (errors) {
+        console.error(errors);
     });
-});
+}
 
-
-
+displayWeather();
 
 </script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
