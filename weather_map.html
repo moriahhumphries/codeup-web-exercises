@@ -47,11 +47,41 @@
 
     "use strict";
 
+    mapboxgl.accessToken = 'pk.eyJ1IjoibW9yaWFoaHVtcGhyaWVzIiwiYSI6ImNrOGo2c283ZDA0azgzbHBxZGVtMWdzNjcifQ.Hoq9gRxqSSGKBQ_zK17yog';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        center: [-96.796989, 32.776665],
+        zoom: 11,
+
+    });
+
+    var marker = new mapboxgl.Marker({
+        draggable: true
+    })
+        .setLngLat([-96.796989, 32.776665])
+        .addTo(map);
+
+    var lngLat = {
+        lat: 32.776665,
+        lng:-96.796989
+    };
+    function onDragEnd() {
+
+        lngLat = marker.getLngLat();
+        coordinates.style.display = 'block';
+        coordinates.innerHTML =
+            'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
+    displayWeather()
+    }
+    marker.on('dragend', onDragEnd);
+
 
 function displayWeather(){
     $.get("http://api.openweathermap.org/data/2.5/forecast", {
         "APPID": weatherKey,
-        "q": "Dallas, US",
+        "lat": `${lngLat.lat}`,
+        "lon":`${lngLat.lng}`,
         "units": "imperial"
     }).done(function (data) {
         console.log(data)
@@ -81,7 +111,7 @@ function displayWeather(){
 displayWeather();
 
 </script>
-<script src="js/mapbox-weather.js"></script>
+
 <script src="js/maxbox-geocoder-utils.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>

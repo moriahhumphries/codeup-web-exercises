@@ -14,8 +14,9 @@ var marker = new mapboxgl.Marker({
     .setLngLat([-96.839450, 32.951550])
     .addTo(map);
 
+var lngLat = "";
 function onDragEnd() {
-    var lngLat = marker.getLngLat();
+    lngLat = marker.getLngLat();
     coordinates.style.display = 'block';
     coordinates.innerHTML =
         'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
@@ -23,6 +24,25 @@ function onDragEnd() {
 }
 
 marker.on('dragend', onDragEnd);
+
+exports=lngLat;
+
+// function reverseGeocode(coordinates, token) {
+//     var baseUrl = 'https://api.mapbox.com';
+//     var endPoint = '/geocoding/v5/mapbox.places/';
+//     return fetch(baseUrl + endPoint + coordinates.lng + "," + coordinates.lat + '.json' + "?" + 'access_token=' + token)
+//         .then(function(res) {
+//             return res.json();
+//         })
+//         // to get all the data from the request, comment out the following three lines...
+//         .then(function(data) {
+//             return data.features[0].place_name;
+//         });
+// }
+// reverseGeocode({lng: -99.4861, lat: 29.4260}, mapBoxToken).then(function(results) {
+//     // logs the address for The Alamo
+//     console.log(results);
+// });
 //
 // var markerOptions = {
 //     color: "orange",
@@ -91,3 +111,5 @@ marker.on('dragend', onDragEnd);
 //     zoeMarker.setPopup(zoeRestaurant);
 // });
 //
+
+
