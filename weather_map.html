@@ -19,9 +19,9 @@
 
 <div id="input-form"><form>
     <div class="form-group form-inline ml-3">
-        <label for="formGroupExampleInput" id="search">Place</label>
-        <input type="text" class="form-control ml-3" id="formGroupExampleInput" placeholder="Enter city">
-    <button class="btn btn-primary ml-3" type="submit">Search</button>
+        <label id="search">Place</label>
+        <input type="text" class="form-control ml-3" id="cityName" placeholder="Enter city">
+    <button class="btn btn-primary ml-3" type="submit" id="citySearch">Search</button>
     </div>
 </form>
 </div>
@@ -75,13 +75,20 @@
     marker.on('dragend', onDragEnd);
 
 
-function displayWeather(){
-    $.get("http://api.openweathermap.org/data/2.5/forecast", {
+function displayWeather(cityName){
+    var weatherOptions = {
         "APPID": weatherKey,
+        "q":`${cityName?cityName:'Dallas'}`,
         "lat": `${lngLat.lat}`,
         "lon":`${lngLat.lng}`,
         "units": "imperial"
-    }).done(function (data) {
+    }
+    if(!cityName){
+        delete weatherOptions.q
+    }
+
+    $.get("http://api.openweathermap.org/data/2.5/forecast", weatherOptions)
+        .done(function (data) {
         console.log(data)
 
         var HTML = "";
@@ -102,16 +109,20 @@ function displayWeather(){
             }
         });
 
-        $('#city').text(data.city.name);
+        $('#city').text("Current City: " + data.city.name);
+
     }).fail(function (errors) {
         console.error(errors);
     });
 
 }
 
-
-
 displayWeather();
+
+$('#citySearch').click(function(e){
+    e.preventDefault()
+    displayWeather($('#cityName').val())
+})
 
 </script>
 
