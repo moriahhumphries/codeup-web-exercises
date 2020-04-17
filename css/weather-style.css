@@ -5,3 +5,16 @@
 #coordinates {
     margin: 20px;
 }
+
+/*li .list-group-item {*/
+/*    padding: 3px; */
+/*}*/
+
+div .card-header {
+    padding: 2px !important;
+}
+
+.list-group-item {
+    padding: 5px !important;
+}
+

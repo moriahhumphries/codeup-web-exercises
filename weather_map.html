@@ -99,11 +99,11 @@ function displayWeather(cityName){
                 HTML = "<div class=\"card\" style=\"width: 100%;\">" + "<div class= \"card-header\">" +
                     "<h6 class=\"text-center\">" + ele.dt_txt.split(" ")[0] + "</h6>" +
                         "</div>" + "<ul class=\"list-group list-group-flush\">" +
-                    "<li class=\"list-group-item\">" + "High/Low Temperature:" + " " + ele.main.temp_min + " " + "/"+ " " +  + ele.main.temp + " " + "</li>" +
-                    "<li class=\"list-group-item\">" + "Description:" + " " + ele.weather[0].description + "</li>" +
-                    "<li class=\"list-group-item\">" + "Humidity:" + " " + ele.main.humidity + "</li>" +
-                    "<li class=\"list-group-item\">" + "Wind:" + " " + ele.wind.speed + "</li>" +
-                    "<li class=\"list-group-item\">" + "Pressure:" + " " + ele.main.pressure + "</li>" + "</ul>" +
+                    "<li class=\"list-group-item text-center\">" + "High/Low Temp:" + " " + Math.round(ele.main.temp_min) + "&deg F"  + " " + "/"+ " " +  + Math.round(ele.main.temp_max) + "&deg F" + " " + "</li>" +
+                    "<li class=\"list-group-item text-center\">" + "Description:" + " " + ele.weather[0].description + "</li>" +
+                    "<li class=\"list-group-item text-center\">" + "Humidity:" + " " + ele.main.humidity + "</li>" +
+                    "<li class=\"list-group-item text-center\">" + "Wind:" + " " + ele.wind.speed + "</li>" +
+                    "<li class=\"list-group-item text-center\">" + "Pressure:" + " " + ele.main.pressure + "</li>" + "</ul>" +
                     "</div>";
                 $("#weather-1").append(HTML);
             }
