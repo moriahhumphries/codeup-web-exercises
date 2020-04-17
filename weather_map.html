@@ -92,14 +92,24 @@ function displayWeather(cityName){
             lat:data.city.coord.lat
         }
         var HTML = "";
+            var imgUrl = "http://openweathermap.org/img/w/";
         $("#weather-1").empty();
         data.city.name;
+
         data.list.forEach(function (ele,ind) {
+
             if(ind % 8 === 0) {
-                HTML = "<div class=\"card\" style=\"width: 100%;\">" + "<div class= \"card-header\">" +
+                HTML = "<div class=\"card d-flex justify-content-around\" style=\"width: 100%;\">" + "<div class= \"card-header\">" +
                     "<h6 class=\"text-center\">" + ele.dt_txt.split(" ")[0] + "</h6>" +
                         "</div>" + "<ul class=\"list-group list-group-flush\">" +
-                    "<li class=\"list-group-item text-center\">" + "High/Low Temp:" + " " + Math.round(ele.main.temp_min) + "&deg F"  + " " + "/"+ " " +  + Math.round(ele.main.temp_max) + "&deg F" + " " + "</li>" +
+
+
+
+                    "<li class=\"list-group-item text-center\">" + "High/Low Temp:" + " " + Math.round(ele.main.temp_min) + "&deg F"  + " " + "/"+ " " +  + Math.round(ele.main.temp_max) + "&deg F" + " " + "<i id=\"icon\">"+ '<img src="http://openweathermap.org/img/w/"+ele.weather[0].icon+".png">' + "</i>" + "</li>"
+
+
+
+                    +
                     "<li class=\"list-group-item text-center\">" + "Description:" + " " + ele.weather[0].description + "</li>" +
                     "<li class=\"list-group-item text-center\">" + "Humidity:" + " " + ele.main.humidity + "</li>" +
                     "<li class=\"list-group-item text-center\">" + "Wind:" + " " + ele.wind.speed + "</li>" +

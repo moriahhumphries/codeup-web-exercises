@@ -18,3 +18,7 @@ div .card-header {
     padding: 5px !important;
 }
 
+#weather-1 {
+    width: 100% !important;
+    margin-left: 0 !important;
+}
