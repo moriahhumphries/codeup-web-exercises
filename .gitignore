@@ -1,6 +1,8 @@
 .idea
 *.iml
 .ds_store
+testing-js.html
+testing-js.js
 <<<<<<< HEAD
 
 =======
