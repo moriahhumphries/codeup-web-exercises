@@ -25,7 +25,6 @@ function onDragEnd() {
 
 marker.on('dragend', onDragEnd);
 
-exports=lngLat;
 
 // function reverseGeocode(coordinates, token) {
 //     var baseUrl = 'https://api.mapbox.com';

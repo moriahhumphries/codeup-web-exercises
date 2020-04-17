@@ -64,7 +64,7 @@
 
     var lngLat = {
         lat: 32.776665,
-        lng:-96.796989
+        lng:-96.8067
     };
     function onDragEnd() {
 
@@ -90,7 +90,10 @@ function displayWeather(cityName){
     $.get("http://api.openweathermap.org/data/2.5/forecast", weatherOptions)
         .done(function (data) {
         console.log(data)
-
+        var coords = {
+            lon:data.city.coord.lon,
+            lat:data.city.coord.lat
+        }
         var HTML = "";
         $("#weather-1").empty();
         data.city.name;
@@ -109,6 +112,20 @@ function displayWeather(cityName){
             }
         });
 
+        if(cityName){
+            var marker = new mapboxgl.Marker({
+                draggable: true
+            })
+                .setLngLat([coords.lon,coords.lat])
+                .addTo(map);
+            map.flyTo({
+                center: [
+                    coords.lon,
+                    coords.lat
+                ],
+                essential: true
+            })
+        }
         $('#city').text("Current City: " + data.city.name);
 
     }).fail(function (errors) {
@@ -120,8 +137,8 @@ function displayWeather(cityName){
 displayWeather();
 
 $('#citySearch').click(function(e){
-    e.preventDefault()
-    displayWeather($('#cityName').val())
+    e.preventDefault();
+    displayWeather($('#cityName').val());
 })
 
 </script>
