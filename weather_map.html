@@ -113,11 +113,12 @@ function displayWeather(cityName){
         });
 
         if(cityName){
-            var marker = new mapboxgl.Marker({
+            marker = new mapboxgl.Marker({
                 draggable: true
             })
                 .setLngLat([coords.lon,coords.lat])
                 .addTo(map);
+            marker.on('dragend', onDragEnd);
             map.flyTo({
                 center: [
                     coords.lon,
