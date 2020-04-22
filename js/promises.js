@@ -9,21 +9,13 @@ function getLastCommit(username) {
 }
 
 getLastCommit('moriahhumphries')
-    // .then(lastCommitDate => document.body.innerHTML = `${lastCommitDate}`, lastCommitDate);
 
-
-
-// return fetch('https://api.github.com/users/moriahhumphries/events/public', {headers: {'Authorization': gitHub}})
-//     .then(response => response.json())
-//     .then(users => {
-//
-//         console.log(users[0]);
-//
-//
-//     })
-//     .catch(error => console.error(error));
-//
-
-// function wait() {
-//
-// }
+const wait = miliseconds => {
+    return new Promise((resolved, reject) => {
+        setTimeout(() => {
+            resolved();
+        }, miliseconds);
+    });
+};
+    wait(1000).then(() => console.log('You\'ll see this after 1 second'));
+    wait(3000).then(() => console.log('You\'ll see this after 3 seconds'));
