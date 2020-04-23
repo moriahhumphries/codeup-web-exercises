@@ -59,19 +59,18 @@ console.log(`Average years of experience: ${totalExperience / users.length}`);
 
 // reduce - longest email from list of users
 
-// function findLongestEmail(str) {
-//     let longestEmail = str.split(' ').reduce(function(longest, currentWord) {
-//         return currentWord.length > longest.length ? currentWord : longest;
-//     }, "");
-//     return longestEmail.length;
-// }
-// findLongestEmail(users.email);
-// console.log(users.email);
-
 let longestEmail = users.reduce((total, person) => {
     return total.email.length > person.email.length ? total.email:person;
 
 });
 
-//console.log(`Actual longest email, fernando@codeup.com: ${users[3].email.length}`);
 console.log(longestEmail);
+
+// reduce - list of users names in single string
+
+let allUsers = users.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue.name + ", ";
+
+}, "");
+
+console.log(`Your instructors are: ${allUsers}`);
