@@ -46,3 +46,14 @@ console.log(userLanguages);
 
 let userEmail = users.map(users => users.email);
 console.log(userEmail);
+
+// reduce - sum total years experience, calculate average
+
+let totalExperience = users.reduce((total, person) => {
+    return total + person.yearsOfExperience;
+
+}, 0);
+
+console.log(`Total years of experience: ${totalExperience}`);
+console.log(`Average years of experience: ${totalExperience / users.length}`);
+
