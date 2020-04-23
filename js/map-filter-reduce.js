@@ -68,8 +68,11 @@ console.log(longestEmail);
 
 // reduce - list of users names in single string
 
-let allUsers = users.reduce((accumulator, currentValue) => {
-    return accumulator + currentValue.name + ", ";
+let allUsers = users.reduce((names, currentValue) => {
+    if (names !== '') {
+        names += ', ';
+    }
+    return names + currentValue.name;
 
 }, "");
 
