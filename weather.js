@@ -53,4 +53,5 @@ function displayWeather() {
                 $("#weather-1").append(HTML);
             });
         };
-    }
+    })
+}
